@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Maria in the Neighborhood — La Jolla</title>
+  <!-- Tailwind CDN (Play CDN for quick prototype) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description" content="Maria in the Neighborhood — short-form storytelling & La Jolla discovery" />
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <!-- Header / Nav -->
+  <header class="bg-white shadow sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center gap-4">
+                    <img src="resources/mariaProfile.jpg" alt="Maria"
+                        class="rounded-full w-10 h-10" />          <div>
+            <div class="font-bold text-lg">Maria in the Neighborhood</div>
+            <div class="text-sm text-slate-500">La Jolla: People, Place, Possibility</div>
+          </div>
+        </div>
+        <nav class="hidden md:flex items-center gap-6">
+          <a href="#home" class="py-2 hover:text-sky-600">Home</a>
+          <a href="#about" class="py-2 hover:text-sky-600">About</a>
+          <a href="#videos" class="py-2 hover:text-sky-600">Videos</a>
+          <a href="#zillow" class="py-2 hover:text-sky-600">Zillow</a>
+          <a href="#contact" class="py-2 hover:text-sky-600">Contact</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <a href="#videos" class="inline-block bg-sky-600 text-white px-4 py-2 rounded shadow hover:bg-sky-700">Watch Latest Episode</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8 space-y-10">
+
+    <!-- HERO -->
+    <section id="home" class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
+      <div class="lg:col-span-2 bg-white rounded-xl p-6 shadow">
+        <h1 class="text-3xl font-extrabold">Maria in the Neighborhood</h1>
+        <p class="mt-2 text-slate-600">Join Maria and explore the places, people, and local flavor of La Jolla!</p>
+        <div class="mt-4 flex flex-wrap gap-3 items-center">
+          <a href="#videos" class="inline-flex items-center gap-2 bg-sky-600 text-white px-4 py-2 rounded">▶ Watch Latest Episode</a>
+          <a href="https://instagram.com/" target="_blank" rel="noopener" class="text-slate-700 hover:text-sky-600">Instagram</a>
+          <a href="https://youtube.com/" target="_blank" rel="noopener" class="text-slate-700 hover:text-sky-600">YouTube</a>
+          <a href="https://facebook.com/" target="_blank" rel="noopener" class="text-slate-700 hover:text-sky-600">Facebook</a>
+        </div>
+      </div>
+
+      <!-- Real-time widget column -->
+      <aside class="bg-white rounded-xl p-6 shadow space-y-4">
+        <div>
+          <div class="text-sm text-slate-500">Local Time</div>
+          <div id="local-time" class="text-2xl font-medium">--:--</div>
+          <div class="text-xs text-slate-400">La Jolla (America/Los_Angeles)</div>
+        </div>
+
+        <div>
+          <div class="text-sm text-slate-500">5-Day Forecast</div>
+          <div id="forecast" class="mt-2 grid grid-cols-5 gap-2 text-center text-sm"></div>
+        </div>
+
+        <div>
+          <div class="text-sm text-slate-500">Neighborhood Calendar</div>
+          <ul class="mt-2 text-sm space-y-1" id="events">
+            <li>Sat Farmers Market — 9am</li>
+            <li>Sun Art Walk — 3pm</li>
+            <li>Monthly Beach Cleanup — 8am</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="text-sm text-slate-500">Best of La Jolla</div>
+          <ul class="mt-2 text-sm space-y-1">
+            <li>Hidden Cove Cafe</li>
+            <li>Ocean View Bookshop</li>
+            <li>Pier Street Tacos</li>
+          </ul>
+        </div>
+
+        <div class="mt-2">
+          <div class="text-sm text-slate-500">Zillow Home Spotlight</div>
+          <!-- Placeholder for Zillow widget. Replace with Zillow "Search Homes" embed or agent listing code. -->
+          <div class="mt-2 border rounded p-3 text-sm text-slate-600">Featured Home of the Week — <a href="#zillow" class="text-sky-600">Explore La Jolla Homes</a></div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Video of the Week -->
+    <section class="bg-white rounded-xl p-6 shadow">
+      <h2 class="text-2xl font-bold">Video of the Week</h2>
+      <div class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="md:col-span-2">
+          <!-- Example embedded YouTube clip -->
+          <div class="aspect-video bg-black rounded overflow-hidden">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/L5qVYoO5268?si=uiRH_uSdjnX-3jC3" title="Video of the Week" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <p class="mt-3 text-slate-600">Maria visits Ken from Bird Rock Fine Wine in Bird Rock to explore his beautiful wine shop.</p>
+          <div class="mt-3 flex gap-3">
+            <a href="#videos" class="inline-block bg-sky-600 text-white px-4 py-2 rounded">Watch Full Episode</a>
+            <button onclick="shareVideo()" class="inline-block border px-3 py-2 rounded">Share This Video</button>
+          </div>
+        </div>
+        <div class="bg-slate-50 rounded p-4">
+          <h3 class="font-semibold">Featured Episode</h3>
+          <p class="text-sm mt-2 text-slate-600">Maria visits Ken from Bird Rock Fine Wine in Bird Rock to explore his beautiful wine shop.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community Highlights -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <article class="bg-white rounded-xl p-6 shadow">
+        <h3 class="font-bold">Event Spotlight</h3>
+        <p class="mt-2 text-sm text-slate-600">Sunset Concert at the Pier — family-friendly, free entry.</p>
+      </article>
+      <article class="bg-white rounded-xl p-6 shadow">
+        <h3 class="font-bold">Local Bite</h3>
+        <p class="mt-2 text-sm text-slate-600">Pier Street Tacos — Maria's go-to after a surf.</p>
+      </article>
+      <article class="bg-white rounded-xl p-6 shadow">
+        <h3 class="font-bold">People of La Jolla</h3>
+        <p class="mt-2 text-sm text-slate-600">Meet Carlos — surf instructor and community mentor.</p>
+      </article>
+    </section>
+
+    <!-- About Teaser -->
+    <section id="about" class="bg-white rounded-xl p-6 shadow flex flex-col md:flex-row items-center gap-6">
+      <img src="resources/mariaProfile.jpg" alt="Maria portrait" class="rounded-lg w-48 h-48 object-cover" />
+      <div>
+        <h2 class="text-2xl font-bold">About Maria</h2>
+        <p class="mt-2 text-slate-600">Born in Rio de Janeiro and now calling La Jolla home, Maria brings warmth, curiosity, and a knack for discovering people's stories. Her short-format videos spotlight local makers, neighbors, and the places that make the town unique.</p>
+        <a href="#" class="mt-4 inline-block bg-white border px-4 py-2 rounded hover:bg-slate-100">Learn More</a>
+      </div>
+    </section>
+
+    <!-- Social Feed Strip -->
+    <section id="videos" class="bg-white rounded-xl p-6 shadow">
+      <h2 class="text-2xl font-bold">Latest Reels & Shorts</h2>
+      <div class="mt-4 flex gap-4 overflow-x-auto py-2">
+        <!-- Thumbnails; replace with live Instagram / YouTube embeds as desired -->
+        <div class="w-48 flex-shrink-0">
+          <div class="aspect-video bg-black rounded overflow-hidden mb-2"><img src="./resources/tasteFrance.png" alt="reel" class="w-full h-full object-cover"/></div>
+          <div class="text-sm">A taste of France</div>
+        </div>
+        <div class="w-48 flex-shrink-0">
+          <div class="aspect-video bg-black rounded overflow-hidden mb-2"><img src="./resources/pedego.png" alt="reel" class="w-full h-full object-cover"/></div>
+          <div class="text-sm">Pedego Electric Bikes</div>
+        </div>
+        <div class="w-48 flex-shrink-0">
+          <div class="aspect-video bg-black rounded overflow-hidden mb-2"><img src="./resources/eddie.png" alt="reel" class="w-full h-full object-cover"/></div>
+          <div class="text-sm">Eddie from PTC Boxing</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Zillow Page CTA -->
+    <section id="zillow" class="bg-white rounded-xl p-6 shadow">
+      <h2 class="text-2xl font-bold">Explore La Jolla Homes</h2>
+      <p class="mt-2 text-slate-600">Curated Zillow listings and a weekly featured home. Click to see the full gallery and sign up for alerts.</p>
+      <div class="mt-4 flex gap-3">
+        <!-- Important: link intentionally points to an internal landing page /explore-la-jolla-homes for tracking -->
+        <a href="/explore-la-jolla-homes" data-cta-label="Explore La Jolla Homes" class="bg-sky-600 text-white px-4 py-2 rounded">Explore La Jolla Homes</a>
+        <a href="#contact" class="border px-4 py-2 rounded">Partner with Maria</a>
+      </div>
+    </section>
+
+    <!-- Contact / CTA -->
+    <section id="contact" class="bg-white rounded-xl p-6 shadow">
+      <h2 class="text-2xl font-bold">Be Part of the Neighborhood</h2>
+      <p class="mt-2 text-slate-600">Got a story, business, or event? Reach out and let's feature it.</p>
+
+      <form id="contact-form" class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4" data-analytics-page="/contact">
+        <input name="first_name" placeholder="First name" class="border rounded px-3 py-2" />
+        <input name="email" type="email" placeholder="Email" class="border rounded px-3 py-2" />
+        <input name="phone" placeholder="Phone (optional)" class="border rounded px-3 py-2" />
+        <select name="inquiry_type" class="border rounded px-3 py-2">
+          <option value="feature">Feature / Story</option>
+          <option value="partner">Business Partnership</option>
+          <option value="press">Press / Media</option>
+        </select>
+        <textarea name="message" placeholder="Tell us a little about the story or partnership..." class="col-span-1 md:col-span-2 border rounded px-3 py-2 h-32"></textarea>
+        <div class="col-span-1 md:col-span-2 flex gap-3">
+          <button type="submit" class="bg-sky-600 text-white px-4 py-2 rounded">Share Your Story</button>
+          <button type="button" onclick="subscribeZillowCTAs()" class="border px-4 py-2 rounded">Explore La Jolla Homes on Zillow</button>
+        </div>
+      </form>
+
+      <p class="mt-4 text-sm text-slate-500">Email: <a href="mailto:hello@mariaintheneighborhood.com" class="text-sky-600">hello@mariaintheneighborhood.com</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white rounded-xl p-6 shadow">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="text-sm text-slate-600">Quick recap: <span id="footer-time" class="font-medium">--:--</span> • <span id="footer-weather">Sunny • 68°F</span></div>
+        <div class="flex gap-4 items-center">
+          <a href="#" class="text-slate-700 hover:text-sky-600">Instagram</a>
+          <a href="#" class="text-slate-700 hover:text-sky-600">YouTube</a>
+          <a href="#" class="text-slate-700 hover:text-sky-600">Facebook</a>
+          <a href="/explore-la-jolla-homes" class="ml-4 text-sky-600">See Featured Homes on Zillow</a>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script>
+    // Local time (La Jolla is America/Los_Angeles)
+    function updateTime() {
+      try {
+        const now = new Date();
+        // Force to Pacific Time display using toLocaleString options
+        const opts = { hour: '2-digit', minute: '2-digit', hour12: true, timeZone: 'America/Los_Angeles' };
+        document.getElementById('local-time').textContent = now.toLocaleTimeString([], opts);
+        document.getElementById('footer-time').textContent = now.toLocaleTimeString([], opts);
+      } catch (e) { console.warn(e); }
+    }
+    updateTime();
+    setInterval(updateTime, 30_000);
+
+    // Simple 5-day forecast placeholder (replace with real API)
+    const mockForecast = [
+      {day: 'Thu', hi: 72, lo: 60, vibe: 'Calm'},
+      {day: 'Fri', hi: 70, lo: 59, vibe: 'Windy'},
+      {day: 'Sat', hi: 68, lo: 57, vibe: 'Surf'},
+      {day: 'Sun', hi: 69, lo: 58, vibe: 'Sunny'},
+      {day: 'Mon', hi: 71, lo: 59, vibe: 'Clear'}
+    ];
+    const fc = document.getElementById('forecast');
+    mockForecast.forEach(f => {
+      const div = document.createElement('div');
+      div.className = 'p-2 rounded';
+      div.innerHTML = `<div class="font-medium">${f.day}</div><div class="text-xs">${f.hi}°/${f.lo}°</div><div class="text-xs text-slate-400">${f.vibe}</div>`;
+      fc.appendChild(div);
+    });
+
+    function shareVideo(){
+      if(navigator.share){
+        navigator.share({ title: 'Maria in the Neighborhood', text: 'Watch this short from Maria in the Neighborhood', url: location.href });
+      } else {
+        alert('Copy the URL to share!');
+      }
+    }
+
+    // Contact form placeholder submission (wire up to backend / CRM webhook)
+    document.getElementById('contact-form').addEventListener('submit', async function(e){
+      e.preventDefault();
+      const fd = new FormData(this);
+      const data = Object.fromEntries(fd.entries());
+
+      // Fire GTM/Analytics event (example)
+      if(window.dataLayer) window.dataLayer.push({event: 'lead_submit', page: '/contact'});
+
+      // TODO: Replace with real endpoint
+      try{
+        await fetch('/api/submit-lead', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify(data) });
+        alert('Thanks — we received your submission!');
+        this.reset();
+      }catch(err){
+        console.error(err);
+        alert('Submission failed (this is a prototype).');
+      }
+    });
+
+    // Zillow CTA analytics helper
+    function subscribeZillowCTAs(){
+      if(window.dataLayer) window.dataLayer.push({ event: 'zillow_cta_click', cta_label: 'Explore La Jolla Homes', page_location: window.location.pathname });
+      // Navigate to internal explore page
+      window.location.href = '/explore-la-jolla-homes';
+    }
+
+    // Auto-bind any internal links to push a basic analytics event
+    document.querySelectorAll('a[data-cta-label]').forEach(a => {
+      a.addEventListener('click', () => {
+        const label = a.dataset.ctaLabel || 'cta';
+        if(window.dataLayer) window.dataLayer.push({ event: 'cta_click', cta_label: label, page_location: window.location.pathname });
+      });
+    });
+  </script>
+
+  <!-- Notes for production:
+       - Replace mocked forecast and events with a real feed (OpenWeatherMap or similar).
+       - Replace YouTube embed IDs and social thumbnails with live content or server-side fetched lists.
+       - Insert Zillow "Search Homes" widget where indicated and ensure the homepage widget's CTA links to /explore-la-jolla-homes for tracking.
+       - Add GTM container snippet in <head> and dataLayer initialization for analytics.
+       - Implement backend endpoints for /api/submit-lead and the /explore-la-jolla-homes landing page that captures UTM + form data.
+  -->
+
+</body>
+</html>

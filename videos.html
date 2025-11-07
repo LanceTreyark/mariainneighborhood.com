@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Maria in the Neighborhood — Videos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="description" content="Maria in the Neighborhood — Watch all episodes and video highlights" />
+</head>
+
+<body class="bg-slate-50 text-slate-800">
+    <!-- Header / Nav -->
+    <header class="bg-white shadow sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px- lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-4">
+                    <img src="resources/mariaProfile.jpg" alt="Maria"
+                        class="rounded-full w-10 h-10" />
+                    <div>
+                        <div class="font-bold text-lg">Maria in the Neighborhood</div>
+                        <div class="text-sm text-slate-500">La Jolla: People, Place, Possibility</div>
+                    </div>
+                </div>
+                <nav class="hidden md:flex items-center gap-6">
+                    <a href="/" class="py-2 hover:text-sky-600">Home</a>
+                    <a href="/about" class="py-2 hover:text-sky-600">About</a>
+                    <a href="/videos" class="py-2 font-semibold underline text-sky-700">Videos</a>
+                    <a href="/explore-la-jolla-homes" class="py-2 hover:text-sky-600">Zillow</a>
+                    <a href="/contact" class="py-2 hover:text-sky-600">Contact</a>
+                </nav>
+                <div class="flex items-center gap-3">
+                    <a href="#latest"
+                        class="inline-block bg-sky-600 text-white px-4 py-2 rounded shadow hover:bg-sky-700">Watch
+                        Latest Episode</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8 space-y-10">
+
+        <!-- Hero Section -->
+        <section class="bg-white rounded-xl p-6 shadow text-center">
+            <h1 class="text-3xl font-extrabold">Maria in the Neighborhood — All Episodes</h1>
+            <p class="mt-2 text-slate-600 max-w-2xl mx-auto">Relive every story and moment as Maria explores La Jolla’s
+                people, homes, and heart. Browse full episodes and behind-the-scenes highlights below.</p>
+        </section>
+
+        <!-- Latest Featured Episode -->
+        <section id="latest" class="bg-white rounded-xl p-6 shadow grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
+            <div class="lg:col-span-2">
+                <div class="aspect-video bg-black rounded overflow-hidden">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/kqF67CKKlQo?si=FsmA0kbM9vp03x7D"
+                        title="Latest Episode" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <h2 class="mt-4 text-2xl font-semibold">Featured Episode: A Taste of France in La Jolla🥐</h2>
+                <p class="mt-2 text-slate-600">🎙️ Maria had the pleasure of interviewing Annie, the inspiring owner of
+                    Parisien Gourmandises. She shared her incredible
+                    journey—from being born in Morocco, raised in France, to building her dream life and
+                    business here in San Diego 🌴💛.
+
+                    From her passion for French pastries 🥖🍰 to her entrepreneurial journey, Annie is proof that
+                    following your dreams is always worth it! 💫</p>
+            </div>
+            <aside class="bg-slate-50 rounded-xl p-4 space-y-2">
+                <h3 class="font-semibold text-lg">Episode Notes</h3>
+                <p class="text-sm text-slate-600">Filmed at Parisien Gourmandises 7643 Girard Ave, La Jolla, CA 92037.</p>
+                <button class="mt-2 bg-sky-600 text-white px-4 py-2 rounded hover:bg-sky-700 w-full">Share
+                    Episode</button>
+            </aside>
+        </section>
+
+        <!-- Video Gallery Grid -->
+        <section class="bg-white rounded-xl p-6 shadow">
+            <h2 class="text-2xl font-bold mb-6">All Episodes</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+                    <div class="aspect-video bg-black">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/VIDEO_ID_1" title="Episode 1"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg">Episode 1: La Jolla Living</h3>
+                        <p class="text-sm text-slate-600 mt-2">A morning walk through the hidden gems of La Jolla’s
+                            coastline.</p>
+                    </div>
+                </div>
+                <div class="rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+                    <div class="aspect-video bg-black">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/VIDEO_ID_2" title="Episode 2"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg">Episode 2: North Park Art Walk</h3>
+                        <p class="text-sm text-slate-600 mt-2">Exploring the creativity and color of San Diego’s art
+                            scene.</p>
+                    </div>
+                </div>
+                <div class="rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+                    <div class="aspect-video bg-black">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/VIDEO_ID_3" title="Episode 3"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg">Episode 3: Hidden Gems of Encinitas</h3>
+                        <p class="text-sm text-slate-600 mt-2">Discover coffee spots, surf culture, and architecture
+                            that define Encinitas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-white rounded-xl p-6 shadow text-center">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="text-sm text-slate-600">© 2025 Maria in the Neighborhood — All rights reserved.</div>
+                <div class="flex gap-4 items-center">
+                    <a href="https://instagram.com" class="text-slate-700 hover:text-sky-600">Instagram</a>
+                    <a href="https://youtube.com" class="text-slate-700 hover:text-sky-600">YouTube</a>
+                    <a href="https://facebook.com" class="text-slate-700 hover:text-sky-600">Facebook</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>
