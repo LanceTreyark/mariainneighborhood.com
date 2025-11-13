@@ -51,13 +51,19 @@ export function Header() {
         </nav>
 
         {/* Right side: Theme Toggle + CTA Button */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 md:gap-4">
           <ThemeToggle />
           <Link
             href="/latest-episode"
-            className="rounded-full bg-white px-6 py-2.5 text-sm font-medium text-black transition-colors hover:bg-gray-200"
+            className="hidden rounded-full bg-white px-6 py-2.5 text-sm font-medium text-black transition-colors hover:bg-gray-200 sm:block"
           >
             Watch Latest Episode
+          </Link>
+          <Link
+            href="/latest-episode"
+            className="rounded-full bg-white px-4 py-2 text-xs font-medium text-black transition-colors hover:bg-gray-200 sm:hidden"
+          >
+            Watch
           </Link>
         </div>
       </div>

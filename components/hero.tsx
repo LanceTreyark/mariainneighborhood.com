@@ -12,10 +12,10 @@ export function Hero() {
 
         {/* Main Heading with Image */}
         <div className="relative mb-12">
-          <h1 className="text-[clamp(4rem,15vw,12rem)] font-bold leading-none tracking-tight text-black dark:text-[#d4ff00]">
+          <h1 className="font-heading text-[clamp(4rem,15vw,12rem)] font-bold leading-none tracking-tight text-black dark:text-[#d4ff00]">
             MARIA IN
           </h1>
-          <h1 className="text-[clamp(4rem,15vw,12rem)] font-bold leading-none tracking-tight text-black dark:text-[#d4ff00]">
+          <h1 className="font-heading text-[clamp(4rem,15vw,12rem)] font-bold leading-none tracking-tight text-black dark:text-[#d4ff00]">
             NEIGHBORHOOD
           </h1>
 

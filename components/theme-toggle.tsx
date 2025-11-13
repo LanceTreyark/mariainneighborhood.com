@@ -27,8 +27,8 @@ export function ThemeToggle() {
       aria-label="Toggle theme"
     >
       <div
-        className={`flex h-8 w-8 items-center justify-center rounded-full bg-white transition-transform ${
-          isDark ? "translate-x-6" : "translate-x-0"
+        className={`flex h-8 w-8 items-center justify-center rounded-full transition-transform ${
+          isDark ? "translate-x-6 bg-[#d4ff00]" : "translate-x-0 bg-white"
         }`}
       >
         {isDark ? (

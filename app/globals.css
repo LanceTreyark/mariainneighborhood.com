@@ -121,11 +121,4 @@
     @apply bg-background text-foreground;
     font-family: var(--font-stack-sans), sans-serif;
   }
-
-  h1,
-  h2,
-  h3 {
-    font-family: var(--font-big-shoulders), sans-serif;
-    font-weight: 700;
-  }
 }
