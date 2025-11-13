@@ -11,6 +11,7 @@ import {
 import Link from "next/link";
 import { useState } from "react";
 import { ShareModal } from "./share-modal";
+import { motion } from "framer-motion";
 
 export function IntroSection() {
   const [isShareModalOpen, setIsShareModalOpen] = useState(false);
@@ -47,10 +48,16 @@ export function IntroSection() {
           <div className="space-y-6 rounded-lg border border-gray-200 bg-gradient-to-br from-white to-gray-50 p-6 dark:border-zinc-700 dark:from-zinc-800 dark:to-zinc-900">
             {/* Intro Text and Social Links */}
             <div className="space-y-4">
-              <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+              <motion.p
+                initial={{ opacity: 0, filter: "blur(10px)", y: 20 }}
+                whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="text-lg leading-relaxed text-gray-700 dark:text-gray-300"
+              >
                 Join Maria and explore the places, people, and local flavor of
                 La Jolla!
-              </p>
+              </motion.p>
 
               {/* CTA and Social Links */}
               <div className="flex flex-wrap items-center gap-4">
@@ -93,9 +100,15 @@ export function IntroSection() {
 
             {/* Video of the Week */}
             <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
+              <motion.h2
+                initial={{ opacity: 0, filter: "blur(10px)", y: 20 }}
+                whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="text-3xl font-bold text-gray-900 dark:text-white"
+              >
                 Video of the Week
-              </h2>
+              </motion.h2>
 
               <div className="flex flex-col gap-4 lg:flex-row">
                 {/* Video Player and Controls */}

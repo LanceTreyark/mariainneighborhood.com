@@ -1,4 +1,7 @@
+"use client";
+
 import { Calendar, Coffee, Users } from "lucide-react";
+import { motion } from "framer-motion";
 
 export function SpotlightSection() {
   const spotlights = [
@@ -25,8 +28,12 @@ export function SpotlightSection() {
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-6 md:grid-cols-3">
           {spotlights.map((spotlight) => (
-            <div
+            <motion.div
               key={spotlight.title}
+              initial={{ opacity: 0, filter: "blur(10px)", y: 20 }}
+              whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: spotlights.indexOf(spotlight) * 0.2 }}
               className="rounded-lg border border-gray-200 bg-gradient-to-br from-white to-gray-50 p-6 dark:border-zinc-700 dark:from-zinc-800 dark:to-zinc-900"
             >
               <div className="mb-4 flex items-center gap-3">
@@ -40,7 +47,7 @@ export function SpotlightSection() {
               <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
                 {spotlight.description}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

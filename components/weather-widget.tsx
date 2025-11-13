@@ -1,7 +1,31 @@
-import { Cloud, Calendar, MapPin, Home } from "lucide-react";
+"use client";
+
+import { Cloud, Calendar, MapPin, Home, Sun, CloudRain, Wind } from "lucide-react";
 import Link from "next/link";
+import { motion } from "framer-motion";
+
+const WeatherIcon = ({ condition }: { condition: string }) => {
+  switch (condition.toLowerCase()) {
+    case "sunny":
+    case "clear":
+    case "calm":
+      return <Sun className="h-12 w-12 text-[#d4ff00]" />;
+    case "windy":
+      return <Wind className="h-12 w-12 text-gray-400" />;
+    case "rainy":
+      return <CloudRain className="h-12 w-12 text-blue-400" />;
+    default:
+      return <Cloud className="h-12 w-12 text-gray-400" />;
+  }
+};
 
 export function WeatherWidget() {
+  const currentTemp = 72;
+  const currentCondition = "Sunny";
+  const humidity = 65;
+  const precipitation = 0;
+  const windSpeed = 5;
+
   const forecast = [
     { day: "Thu", high: 72, low: 60, condition: "Calm" },
     { day: "Fri", high: 70, low: 59, condition: "Windy" },
@@ -10,6 +34,8 @@ export function WeatherWidget() {
     { day: "Mon", high: 71, low: 59, condition: "Clear" },
   ];
 
+  const hourlyTemps = [68, 70, 73, 74, 72, 70, 68, 65];
+
   const currentTime = new Date().toLocaleTimeString("en-US", {
     hour: "numeric",
     minute: "2-digit",
@@ -17,50 +43,130 @@ export function WeatherWidget() {
   });
 
   return (
-    <section className="bg-gray-50 px-6 py-8 dark:bg-zinc-900">
+    <section id="weather-section" className="bg-gray-50 px-6 py-8 dark:bg-zinc-900">
       <div className="mx-auto max-w-7xl">
         <div className="rounded-lg border border-gray-200 bg-gradient-to-br from-white to-gray-50 p-6 dark:border-zinc-700 dark:from-zinc-800 dark:to-zinc-900">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-5">
-            {/* Local Time */}
-            <div className="space-y-3">
-              <div className="flex items-center gap-2">
-                <Cloud size={16} className="text-[#d4ff00]" />
-                <p className="text-sm uppercase tracking-wide text-gray-500 dark:text-gray-400">
-                  Local Time
-                </p>
+            {/* Current Weather */}
+            <div className="space-y-3 md:col-span-2">
+              <div className="flex items-start justify-between">
+                <div className="flex items-center gap-4">
+                  <WeatherIcon condition={currentCondition} />
+                  <div>
+                    <p className="text-5xl font-bold text-gray-900 dark:text-white">
+                      {currentTemp}°
+                    </p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">
+                      {currentCondition}
+                    </p>
+                  </div>
+                </div>
+                <div className="text-right">
+                  <p className="text-sm font-medium text-gray-900 dark:text-white">
+                    Weather
+                  </p>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">
+                    {currentTime}
+                  </p>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">
+                    La Jolla
+                  </p>
+                </div>
               </div>
-              <div className="space-y-1">
-                <p className="text-3xl font-bold text-gray-900 dark:text-white">
-                  {currentTime}
-                </p>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  La Jolla (America/Los_Angeles)
-                </p>
+              
+              {/* Weather Details */}
+              <div className="grid grid-cols-3 gap-4 pt-3">
+                <div>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">
+                    Precipitation
+                  </p>
+                  <p className="text-sm font-medium text-gray-900 dark:text-white">
+                    {precipitation}%
+                  </p>
+                </div>
+                <div>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">
+                    Humidity
+                  </p>
+                  <p className="text-sm font-medium text-gray-900 dark:text-white">
+                    {humidity}%
+                  </p>
+                </div>
+                <div>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">
+                    Wind
+                  </p>
+                  <p className="text-sm font-medium text-gray-900 dark:text-white">
+                    {windSpeed} mph
+                  </p>
+                </div>
+              </div>
+
+              {/* Temperature Chart */}
+              <div className="pt-4">
+                <div className="flex items-end justify-between gap-1" style={{ height: "80px" }}>
+                  {hourlyTemps.map((temp, index) => {
+                    const maxTemp = Math.max(...hourlyTemps);
+                    const minTemp = Math.min(...hourlyTemps);
+                    const height = ((temp - minTemp) / (maxTemp - minTemp)) * 60 + 20;
+                    return (
+                      <div key={index} className="flex flex-1 flex-col items-center gap-1">
+                        <span className="text-[10px] text-gray-500 dark:text-gray-400">
+                          {temp}°
+                        </span>
+                        <motion.div
+                          initial={{ height: 0 }}
+                          animate={{ height: `${height}px` }}
+                          transition={{ duration: 0.8, delay: index * 0.1 }}
+                          className="w-full rounded-t-sm bg-gradient-to-t from-[#d4ff00]/30 to-[#d4ff00]"
+                        />
+                      </div>
+                    );
+                  })}
+                </div>
+                <div className="mt-2 flex justify-between text-[10px] text-gray-500 dark:text-gray-400">
+                  <span>9AM</span>
+                  <span>11AM</span>
+                  <span>2PM</span>
+                  <span>5PM</span>
+                  <span>8PM</span>
+                  <span>11PM</span>
+                  <span>2AM</span>
+                  <span>5AM</span>
+                </div>
               </div>
             </div>
 
             {/* 5-Day Forecast */}
-            <div className="space-y-3 md:col-span-2 lg:col-span-2">
+            <div className="space-y-3 md:col-span-2 lg:col-span-3">
               <div className="flex items-center gap-2">
                 <Cloud size={16} className="text-[#d4ff00]" />
                 <p className="text-sm uppercase tracking-wide text-gray-500 dark:text-gray-400">
                   5-Day Forecast
                 </p>
               </div>
-              <div className="grid grid-cols-5 gap-2">
-                {forecast.map((day) => (
-                  <div
+              <div className="grid grid-cols-5 gap-3">
+                {forecast.map((day, index) => (
+                  <motion.div
                     key={day.day}
-                    className="text-center text-sm text-gray-700 dark:text-gray-300"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="flex flex-col items-center gap-2 rounded-lg bg-white/50 p-3 dark:bg-zinc-900/50"
                   >
-                    <p className="mb-1 font-medium">{day.day}</p>
-                    <p className="text-xs">
-                      {day.high}°/{day.low}°
+                    <p className="text-xs font-medium text-gray-700 dark:text-gray-300">
+                      {day.day}
                     </p>
-                    <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
-                      {day.condition}
-                    </p>
-                  </div>
+                    <WeatherIcon condition={day.condition} />
+                    <div className="text-center">
+                      <p className="text-sm font-bold text-gray-900 dark:text-white">
+                        {day.high}°
+                      </p>
+                      <p className="text-xs text-gray-500 dark:text-gray-400">
+                        {day.low}°
+                      </p>
+                    </div>
+                  </motion.div>
                 ))}
               </div>
             </div>
@@ -94,25 +200,25 @@ export function WeatherWidget() {
                 <p>Pier Street Tacos</p>
               </div>
             </div>
-          </div>
 
-          {/* Zillow Home Spotlight - Full Width */}
-          <div className="mt-6 space-y-3 border-t border-gray-200 pt-6 dark:border-zinc-700">
-            <div className="flex items-center gap-2">
-              <Home size={16} className="text-[#d4ff00]" />
-              <p className="text-sm font-semibold uppercase tracking-wide text-gray-700 dark:text-gray-300">
-                Zillow Home Spotlight
+            {/* Zillow Home Spotlight */}
+            <div className="space-y-3">
+              <div className="flex items-center gap-2">
+                <Home size={16} className="text-[#d4ff00]" />
+                <p className="text-sm font-semibold uppercase tracking-wide text-gray-700 dark:text-gray-300">
+                  Zillow Home Spotlight
+                </p>
+              </div>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Featured Home of the Week —{" "}
+                <Link
+                  href="/zillow"
+                  className="text-[#d4ff00] underline hover:no-underline dark:text-[#d4ff00]"
+                >
+                  Explore La Jolla Homes
+                </Link>
               </p>
             </div>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              Featured Home of the Week —{" "}
-              <Link
-                href="/zillow"
-                className="text-[#d4ff00] underline hover:no-underline dark:text-[#d4ff00]"
-              >
-                Explore La Jolla Homes
-              </Link>
-            </p>
           </div>
         </div>
       </div>
