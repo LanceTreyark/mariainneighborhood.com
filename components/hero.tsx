@@ -14,7 +14,7 @@ export function Hero() {
           fill
           className="object-cover"
           priority
-        />
+        /> 
         {/* Pink gradient overlay from left */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#dcbbb4] via-[#dcbbb4]/70 via-40% to-transparent" />
       </div>
