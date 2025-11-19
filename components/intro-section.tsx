@@ -41,11 +41,11 @@ export function IntroSection() {
   ];
 
   return (
-    <section className="relative bg-gray-50 px-6 py-8 dark:bg-zinc-900">
+    <section className="relative bg-gray-50 px-6 py-8">
       <div className="mx-auto max-w-7xl">
         {/* Main Content Card */}
         <div className="flex-1">
-          <div className="space-y-6 rounded-lg border border-gray-200 bg-gradient-to-br from-white to-gray-50 p-6 dark:border-zinc-700 dark:from-zinc-800 dark:to-zinc-900">
+          <div className="space-y-6 rounded-lg border border-gray-200 bg-gradient-to-br from-white to-gray-50 p-6">
             {/* Intro Text and Social Links */}
             <div className="space-y-4">
               <motion.p
@@ -53,7 +53,7 @@ export function IntroSection() {
                 whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="text-lg leading-relaxed text-gray-700 dark:text-gray-300"
+                className="text-lg leading-relaxed text-gray-700"
               >
                 Join Maria and explore the places, people, and local flavor of
                 La Jolla!
@@ -63,7 +63,7 @@ export function IntroSection() {
               <div className="flex flex-wrap items-center gap-4">
                 <Link
                   href="/latest-episode"
-                  className="flex items-center gap-2 rounded-md bg-[#d4ff00] px-6 py-3 text-sm font-medium text-black transition-colors hover:bg-[#c4ef00]"
+                  className="flex items-center gap-2 rounded-md bg-[#dcbbb4] px-6 py-3 text-sm font-medium text-black transition-colors hover:bg-[#ccaaa4]"
                 >
                   <Play size={16} fill="black" />
                   Watch Latest Episode
@@ -73,7 +73,7 @@ export function IntroSection() {
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm font-medium text-gray-700 transition-colors hover:text-[#d4ff00] dark:text-gray-300 dark:hover:text-[#d4ff00]"
+                  className="text-sm font-medium text-gray-700 transition-colors hover:text-[#dcbbb4]"
                 >
                   Instagram
                 </Link>
@@ -82,7 +82,7 @@ export function IntroSection() {
                   href="https://youtube.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm font-medium text-gray-700 transition-colors hover:text-[#d4ff00] dark:text-gray-300 dark:hover:text-[#d4ff00]"
+                  className="text-sm font-medium text-gray-700 transition-colors hover:text-[#dcbbb4]"
                 >
                   YouTube
                 </Link>
@@ -91,7 +91,7 @@ export function IntroSection() {
                   href="https://facebook.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm font-medium text-gray-700 transition-colors hover:text-[#d4ff00] dark:text-gray-300 dark:hover:text-[#d4ff00]"
+                  className="text-sm font-medium text-gray-700 transition-colors hover:text-[#dcbbb4]"
                 >
                   Facebook
                 </Link>
@@ -105,7 +105,7 @@ export function IntroSection() {
                 whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="text-3xl font-bold text-gray-900 dark:text-white"
+                className="text-3xl font-bold text-gray-900"
               >
                 Video of the Week
               </motion.h2>
@@ -125,7 +125,7 @@ export function IntroSection() {
                     />
                   </div>
 
-                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                  <p className="text-sm text-gray-600">
                     Maria visits Ken from Bird Rock Fine Wine in Bird Rock to
                     explore his beautiful wine shop.
                   </p>
@@ -135,14 +135,14 @@ export function IntroSection() {
                       href="https://www.youtube.com/watch?v=L5qVYoO5268"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 rounded-md bg-[#d4ff00] px-6 py-2.5 text-sm font-medium text-black transition-colors hover:bg-[#c4ef00]"
+                      className="flex items-center gap-2 rounded-md bg-[#dcbbb4] px-6 py-2.5 text-sm font-medium text-black transition-colors hover:bg-[#ccaaa4]"
                     >
                       <Play size={16} fill="black" />
                       Watch Full Episode
                     </Link>
                     <button
                       onClick={() => setIsShareModalOpen(true)}
-                      className="flex items-center gap-2 rounded-md border border-gray-300 bg-transparent px-6 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:border-[#d4ff00] hover:text-[#d4ff00] dark:border-zinc-600 dark:text-gray-300 dark:hover:border-[#d4ff00] dark:hover:text-[#d4ff00]"
+                      className="flex items-center gap-2 rounded-md border border-gray-300 bg-transparent px-6 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:border-[#dcbbb4] hover:text-[#dcbbb4]"
                     >
                       <Share2 size={16} />
                       Share This Video
@@ -152,14 +152,14 @@ export function IntroSection() {
 
                 {/* Episode Playlist Sidebar - Full Height */}
                 <div className="w-full lg:w-80">
-                  <div className="flex h-full flex-col rounded-lg border border-gray-200 bg-white dark:border-zinc-700 dark:bg-zinc-900">
-                    <div className="border-b border-gray-200 p-4 dark:border-zinc-700">
+                  <div className="flex h-full flex-col rounded-lg border border-gray-200 bg-white">
+                    <div className="border-b border-gray-200 p-4">
                       <div className="flex items-center gap-2">
-                        <div className="rounded-full bg-[#d4ff00] p-1.5">
+                        <div className="rounded-full bg-[#dcbbb4] p-1.5">
                           <Play size={14} fill="black" className="text-black" />
                         </div>
-                        <h3 className="text-sm font-bold uppercase tracking-wide text-gray-700 dark:text-gray-300">
-                          Episode Playlist
+                        <h3 className="text-sm font-bold uppercase tracking-wide text-gray-700">
+                           Latest Episodes
                         </h3>
                       </div>
                     </div>
@@ -167,7 +167,7 @@ export function IntroSection() {
                       {episodes.map((episode, index) => (
                         <button
                           key={episode.id}
-                          className="flex w-full gap-3 border-b border-gray-200 p-3 text-left transition-colors hover:bg-gray-50 dark:border-zinc-700 dark:hover:bg-zinc-800"
+                          className="flex w-full gap-3 border-b border-gray-200 p-3 text-left transition-colors hover:bg-gray-50"
                         >
                           <div className="relative flex-shrink-0">
                             <img
@@ -181,14 +181,14 @@ export function IntroSection() {
                           </div>
                           <div className="flex-1 space-y-1">
                             <div className="flex items-start gap-2">
-                              <span className="text-xs font-medium text-gray-500 dark:text-gray-400">
+                              <span className="text-xs font-medium text-gray-500">
                                 {index + 1}
                               </span>
                               <div className="flex-1">
-                                <h4 className="line-clamp-2 text-xs font-semibold text-gray-900 dark:text-white">
+                                <h4 className="line-clamp-2 text-xs font-semibold text-gray-900">
                                   {episode.title}
                                 </h4>
-                                <p className="mt-0.5 line-clamp-1 text-[10px] text-gray-600 dark:text-gray-400">
+                                <p className="mt-0.5 line-clamp-1 text-[10px] text-gray-600">
                                   {episode.description}
                                 </p>
                               </div>

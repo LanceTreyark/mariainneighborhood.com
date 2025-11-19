@@ -34,15 +34,15 @@ export function ShareModal({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
-      <div className="relative w-full max-w-md rounded-lg border border-gray-200 bg-white dark:border-zinc-700 dark:bg-zinc-800">
+      <div className="relative w-full max-w-md rounded-lg border border-gray-200 bg-white">
         {/* Header */}
-        <div className="flex items-center justify-between border-b border-gray-200 p-4 dark:border-zinc-700">
-          <h2 className="text-lg font-bold text-gray-900 dark:text-white">
+        <div className="flex items-center justify-between border-b border-gray-200 p-4">
+          <h2 className="text-lg font-bold text-gray-900">
             Share Video
           </h2>
           <button
             onClick={onClose}
-            className="rounded-full p-1 text-gray-500 transition-colors hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-zinc-700 dark:hover:text-gray-300"
+            className="rounded-full p-1 text-gray-500 transition-colors hover:bg-gray-100 hover:text-gray-700"
           >
             <X size={20} />
           </button>
@@ -50,7 +50,7 @@ export function ShareModal({
 
         {/* Content */}
         <div className="p-6">
-          <p className="mb-6 text-sm text-gray-600 dark:text-gray-400">
+          <p className="mb-6 text-sm text-gray-600">
             {videoTitle}
           </p>
 
@@ -60,10 +60,10 @@ export function ShareModal({
               href={shareLinks.facebook}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center gap-2 rounded-lg border border-gray-200 p-4 transition-colors hover:border-[#d4ff00] hover:bg-gray-50 dark:border-zinc-700 dark:hover:border-[#d4ff00] dark:hover:bg-zinc-700"
+              className="flex flex-col items-center gap-2 rounded-lg border border-gray-200 p-4 transition-colors hover:border-[#dcbbb4] hover:bg-gray-50"
             >
               <Facebook size={24} className="text-blue-600" />
-              <span className="text-xs font-medium text-gray-700 dark:text-gray-300">
+              <span className="text-xs font-medium text-gray-700">
                 Facebook
               </span>
             </a>
@@ -72,10 +72,10 @@ export function ShareModal({
               href={shareLinks.twitter}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center gap-2 rounded-lg border border-gray-200 p-4 transition-colors hover:border-[#d4ff00] hover:bg-gray-50 dark:border-zinc-700 dark:hover:border-[#d4ff00] dark:hover:bg-zinc-700"
+              className="flex flex-col items-center gap-2 rounded-lg border border-gray-200 p-4 transition-colors hover:border-[#dcbbb4] hover:bg-gray-50"
             >
               <Twitter size={24} className="text-sky-500" />
-              <span className="text-xs font-medium text-gray-700 dark:text-gray-300">
+              <span className="text-xs font-medium text-gray-700">
                 Twitter
               </span>
             </a>
@@ -84,10 +84,10 @@ export function ShareModal({
               href={shareLinks.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center gap-2 rounded-lg border border-gray-200 p-4 transition-colors hover:border-[#d4ff00] hover:bg-gray-50 dark:border-zinc-700 dark:hover:border-[#d4ff00] dark:hover:bg-zinc-700"
+              className="flex flex-col items-center gap-2 rounded-lg border border-gray-200 p-4 transition-colors hover:border-[#dcbbb4] hover:bg-gray-50"
             >
               <Linkedin size={24} className="text-blue-700" />
-              <span className="text-xs font-medium text-gray-700 dark:text-gray-300">
+              <span className="text-xs font-medium text-gray-700">
                 LinkedIn
               </span>
             </a>
@@ -95,7 +95,7 @@ export function ShareModal({
 
           {/* Copy Link */}
           <div className="space-y-2">
-            <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
+            <label className="text-sm font-medium text-gray-700">
               Or copy link
             </label>
             <div className="flex gap-2">
@@ -103,11 +103,11 @@ export function ShareModal({
                 type="text"
                 value={videoUrl}
                 readOnly
-                className="flex-1 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-gray-700 dark:border-zinc-600 dark:bg-zinc-900 dark:text-gray-300"
+                className="flex-1 rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-sm text-gray-700"
               />
               <button
                 onClick={handleCopyLink}
-                className="flex items-center gap-2 rounded-md bg-[#d4ff00] px-4 py-2 text-sm font-medium text-black transition-colors hover:bg-[#c4ef00]"
+                className="flex items-center gap-2 rounded-md bg-[#dcbbb4] px-4 py-2 text-sm font-medium text-black transition-colors hover:bg-[#ccaaa4]"
               >
                 <LinkIcon size={16} />
                 {copied ? "Copied!" : "Copy"}

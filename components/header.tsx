@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
-import { ThemeToggle } from "./theme-toggle";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,7 +17,7 @@ export function Header() {
   ];
 
   return (
-    <header className="fixed left-0 right-0 top-0 z-50 bg-black dark:bg-black">
+    <header className="fixed left-0 right-0 top-0 z-50 bg-black">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-6 px-6">
         {/* Left side: Mobile Menu Button + Logo */}
         <div className="flex items-center gap-4">
@@ -29,11 +29,14 @@ export function Header() {
             {isMenuOpen ? <X size={32} /> : <Menu size={32} />}
           </button>
 
-          <Link
-            href="/"
-            className="font-heading text-2xl font-bold text-[#d4ff00]"
-          >
-            M-I-N
+          <Link href="/" className="relative h-14 w-40">
+            <Image
+              src="/logo.png"
+              alt="Maria in Neighborhood"
+              fill
+              className="object-contain"
+              priority
+            />
           </Link>
         </div>
 
@@ -50,18 +53,17 @@ export function Header() {
           ))}
         </nav>
 
-        {/* Right side: Theme Toggle + CTA Button */}
+        {/* Right side: CTA Button */}
         <div className="flex items-center gap-2 md:gap-4">
-          <ThemeToggle />
           <Link
             href="/latest-episode"
-            className="hidden rounded-full bg-white px-6 py-2.5 text-sm font-medium text-black transition-colors hover:bg-gray-200 sm:block"
+            className="hidden rounded-full bg-[#dcbbb4] px-6 py-2.5 text-sm font-medium text-black transition-colors hover:bg-[#ccaaa4] sm:block"
           >
             Watch Latest Episode
           </Link>
           <Link
             href="/latest-episode"
-            className="rounded-full bg-white px-4 py-2 text-xs font-medium text-black transition-colors hover:bg-gray-200 sm:hidden"
+            className="rounded-full bg-[#dcbbb4] px-4 py-2 text-xs font-medium text-white transition-colors hover:bg-[#ccaaa4] sm:hidden"
           >
             Watch
           </Link>
@@ -70,7 +72,7 @@ export function Header() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="border-t border-white/10 bg-black dark:bg-black lg:hidden">
+        <div className="border-t border-white/10 bg-black lg:hidden">
           <nav className="flex flex-col px-6 py-4">
             {menuItems.map((item) => (
               <Link

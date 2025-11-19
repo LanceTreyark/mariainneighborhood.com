@@ -1,69 +1,63 @@
 "use client";
 
 import Image from "next/image";
-import { ScrollIndicator } from "./scroll-indicator";
 import { motion } from "framer-motion";
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-screen items-center justify-center bg-white px-6 pt-20 dark:bg-black">
-      <div className="relative z-10 mx-auto max-w-7xl text-center">
-        {/* Tagline */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="my-12 text-sm uppercase tracking-widest text-gray-600 dark:text-gray-400"
-        >
-          La Jolla: People, Place, Possibility
-        </motion.p>
+    <section className="relative flex min-h-screen items-center overflow-hidden pt-20">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/hero.jpg"
+          alt="La Jolla aerial view"
+          fill
+          className="object-cover"
+          priority
+        />
+        {/* Pink gradient overlay from left */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#dcbbb4] via-[#dcbbb4]/70 via-40% to-transparent" />
+      </div>
 
-        {/* Main Heading with Image */}
-        <div className="relative mb-12">
-          <motion.h1
-            initial={{ opacity: 0, filter: "blur(10px)", y: 30 }}
-            animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-            transition={{ duration: 1, delay: 0.4 }}
-            className="font-heading text-[clamp(4rem,15vw,12rem)] font-bold leading-none tracking-tight text-black dark:text-[#d4ff00]"
-          >
-            MARIA IN
-          </motion.h1>
-          <motion.h1
-            initial={{ opacity: 0, filter: "blur(10px)", y: 30 }}
-            animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-            transition={{ duration: 1, delay: 0.6 }}
-            className="font-heading text-[clamp(4rem,15vw,12rem)] font-bold leading-none tracking-tight text-black dark:text-[#d4ff00]"
-          >
-            NEIGHBORHOOD
-          </motion.h1>
-
-          {/* Profile Image - Absolute Centered */}
+      {/* Content Container */}
+      <div className="relative z-10 mx-auto flex w-full max-w-5xl items-center px-6 py-12">
+        <div className="grid w-full items-center gap-12 lg:grid-cols-2">
+          {/* Left Side: Woman Image */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            whileHover={{ scale: 1.1, rotate: 5 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="custom-cursor absolute left-1/2 top-1/2 h-[clamp(5rem,12.5vw,10rem)] w-[clamp(4rem,10vw,8rem)] -translate-x-1/2 -translate-y-1/2"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="flex justify-center lg:justify-start"
           >
-            <Image
-              src="/mariaProfile.jpg"
-              alt="Maria"
-              fill
-              className="rounded-full object-cover"
-              priority
-            />
+            <div className="relative h-64 w-64 overflow-hidden rounded-full border-4 border-[#dcbbb4] md:h-80 md:w-80">
+              <Image
+                src="/hero-img.jpeg"
+                alt="Maria"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
           </motion.div>
-        </div>
 
-        {/* Scroll Indicator */}
-        <div className="mb-8 flex justify-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1 }}
-          >
-            <ScrollIndicator />
-          </motion.div>
+          {/* Right Side: Logo */}
+          <div className="flex items-center justify-center text-center lg:justify-start lg:text-left">
+            {/* Logo */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="relative h-36 w-96 md:h-56 md:w-[560px]"
+            >
+              <Image
+                src="/logo.png"
+                alt="Maria in the Neighborhood"
+                fill
+                className="object-contain"
+                priority
+              />
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>

@@ -16,11 +16,11 @@ export function ScrollIndicator() {
     >
       {/* Scroll bar with animated yellow line */}
       <div className="relative h-8 w-1 overflow-hidden rounded-full bg-gray-700">
-        <div className="absolute left-0 top-0 w-full animate-scroll-down bg-[#d4ff00]" />
+        <div className="absolute left-0 top-0 w-full animate-scroll-down bg-[#dcbbb4]" />
       </div>
 
       {/* SCROLL text */}
-      <p className="text-xs font-medium uppercase tracking-widest text-gray-600 dark:text-gray-400">
+      <p className="text-xs font-medium uppercase tracking-widest text-gray-600">
         Scroll
       </p>
 

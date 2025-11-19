@@ -1,52 +1,69 @@
 "use client";
 
-import { Calendar, Coffee, Users } from "lucide-react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 export function SpotlightSection() {
   const spotlights = [
     {
-      icon: Calendar,
       title: "Event Spotlight",
-      description:
-        "Sunset Concert at the Pier — family-friendly, free entry.",
+      description: "Sunset Concert at the Pier - family friendly, free entry",
+      image: "/spot1.jpeg",
     },
     {
-      icon: Coffee,
-      title: "Local Bite",
-      description: "Pier Street Tacos — Maria's go-to after a surf.",
+      title: "Local Spotlight",
+      description: "Pier Street Tacos - Maria's go-to after a surf",
+      image: "/spot2.jpeg",
     },
     {
-      icon: Users,
       title: "People of La Jolla",
-      description: "Meet Carlos — surf instructor and community mentor.",
+      description: "Meet Carlos - Surf instructor and community mentor",
+      image: "/spot3.jpg",
     },
   ];
 
   return (
-    <section className="bg-gray-50 px-6 py-8 dark:bg-zinc-900">
+    <section className="bg-[#f5e6e3] px-6 py-16">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-6 md:grid-cols-3">
-          {spotlights.map((spotlight) => (
+          {spotlights.map((spotlight, index) => (
             <motion.div
               key={spotlight.title}
-              initial={{ opacity: 0, filter: "blur(10px)", y: 20 }}
-              whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: spotlights.indexOf(spotlight) * 0.2 }}
-              className="rounded-lg border border-gray-200 bg-gradient-to-br from-white to-gray-50 p-6 dark:border-zinc-700 dark:from-zinc-800 dark:to-zinc-900"
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="overflow-hidden rounded-3xl bg-white p-6"
             >
-              <div className="mb-4 flex items-center gap-3">
-                <div className="rounded-full bg-[#d4ff00] p-2">
-                  <spotlight.icon size={20} className="text-black" />
+              {/* Title with Icon */}
+              <div className="mb-4 flex items-start gap-3">
+                <div className="relative mt-1 h-6 w-6 flex-shrink-0">
+                  <Image
+                    src="/asterisk.png"
+                    alt=""
+                    fill
+                    className="object-contain"
+                  />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 dark:text-white">
-                  {spotlight.title}
-                </h3>
+                <div className="flex-1">
+                  <h3 className="font-sans text-xl font-semibold tracking-tight text-gray-400">
+                    {spotlight.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-gray-500">
+                    {spotlight.description}
+                  </p>
+                </div>
               </div>
-              <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-                {spotlight.description}
-              </p>
+
+              {/* Image */}
+              <div className="relative h-48 overflow-hidden rounded-2xl">
+                <Image
+                  src={spotlight.image}
+                  alt={spotlight.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </motion.div>
           ))}
         </div>

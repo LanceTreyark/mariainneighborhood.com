@@ -25,15 +25,15 @@ export function ReelsSection() {
   ];
 
   return (
-    <section className="bg-gray-50 px-6 py-8 dark:bg-zinc-900">
+    <section className="bg-gray-50 px-6 py-8">
       <div className="mx-auto max-w-7xl">
-        <div className="rounded-lg border border-gray-200 bg-gradient-to-br from-white to-gray-50 p-8 dark:border-zinc-700 dark:from-zinc-800 dark:to-zinc-900">
+        <div className="rounded-lg border border-gray-200 bg-gradient-to-br from-white to-gray-50 p-8">
           <motion.h2
             initial={{ opacity: 0, filter: "blur(10px)", y: 20 }}
             whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="mb-6 text-3xl font-bold text-gray-900 dark:text-white"
+            className="mb-6 text-3xl font-bold text-gray-900"
           >
             Latest Videos
           </motion.h2>
@@ -64,7 +64,7 @@ export function ReelsSection() {
                       />
                       {/* Play Button Overlay */}
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="rounded-full bg-[#d4ff00] p-4 transition-transform group-hover:scale-110">
+                        <div className="rounded-full bg-[#dcbbb4] p-4 transition-transform group-hover:scale-110">
                           <svg
                             width="32"
                             height="32"
@@ -82,7 +82,7 @@ export function ReelsSection() {
                     </button>
                   )}
                 </div>
-                <h3 className="text-sm font-medium text-gray-900 dark:text-white">
+                <h3 className="text-sm font-medium text-gray-900">
                   {video.title}
                 </h3>
               </div>

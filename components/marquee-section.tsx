@@ -2,71 +2,47 @@
 
 export function MarqueeSection() {
   const items1 = [
-    "LA JOLLA",
-    "COMMUNITY",
-    "LOCAL STORIES",
-    "NEIGHBORHOOD",
-    "PEOPLE & PLACES",
-    "DISCOVER",
+    { text: "Surf & Sun", style: "sans" },
+    { text: "La Jolla", style: "script" },
+    { text: "Local Flavors", style: "sans" },
   ];
 
   const items2 = [
-    "SURF & SUN",
-    "MARIA",
-    "EXPLORE",
-    "LOCAL FLAVOR",
-    "STORIES",
-    "NEIGHBORS",
+    { text: "Discover", style: "script" },
+    { text: "People & Places", style: "sans" },
+    { text: "Neighborhood", style: "script" },
   ];
 
   return (
-    <section className="relative overflow-hidden bg-white py-12 dark:bg-black">
-      {/* Fade overlays */}
-      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-32 bg-gradient-to-r from-white to-transparent dark:from-black md:w-48" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-32 bg-gradient-to-l from-white to-transparent dark:from-black md:w-48" />
-
-      <div className="space-y-6">
+    <section className="relative overflow-hidden bg-[#c37173] py-8">
+      <div className="space-y-4">
         {/* First row - moving right */}
         <div className="flex animate-marquee-right items-center whitespace-nowrap">
           {/* First set */}
           {items1.map((item, index) => (
-            <div key={`row1-first-${index}`} className="flex items-center">
-              <span className="font-heading text-7xl font-bold uppercase text-[#d4ff00] md:text-9xl">
-                {item}
-              </span>
-              <svg
-                width="48"
-                height="48"
-                viewBox="0 0 48 48"
-                fill="none"
-                className="mx-8 flex-shrink-0 text-gray-300 dark:text-zinc-800 md:mx-12"
-              >
-                <path
-                  d="M24 0L27.708 20.292L48 24L27.708 27.708L24 48L20.292 27.708L0 24L20.292 20.292L24 0Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
+            <span
+              key={`row1-first-${index}`}
+              className={`mx-6 text-5xl text-white md:mx-8 md:text-7xl ${
+                item.style === "script"
+                  ? "font-serif italic"
+                  : "font-sans font-bold"
+              }`}
+            >
+              {item.text}
+            </span>
           ))}
           {/* Duplicate set for seamless loop */}
           {items1.map((item, index) => (
-            <div key={`row1-second-${index}`} className="flex items-center">
-              <span className="font-heading text-7xl font-bold uppercase text-[#d4ff00] md:text-9xl">
-                {item}
-              </span>
-              <svg
-                width="48"
-                height="48"
-                viewBox="0 0 48 48"
-                fill="none"
-                className="mx-8 flex-shrink-0 text-gray-300 dark:text-zinc-800 md:mx-12"
-              >
-                <path
-                  d="M24 0L27.708 20.292L48 24L27.708 27.708L24 48L20.292 27.708L0 24L20.292 20.292L24 0Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
+            <span
+              key={`row1-second-${index}`}
+              className={`mx-6 text-5xl text-white md:mx-8 md:text-7xl ${
+                item.style === "script"
+                  ? "font-serif italic"
+                  : "font-sans font-bold"
+              }`}
+            >
+              {item.text}
+            </span>
           ))}
         </div>
 
@@ -74,43 +50,29 @@ export function MarqueeSection() {
         <div className="flex animate-marquee-left items-center whitespace-nowrap">
           {/* First set */}
           {items2.map((item, index) => (
-            <div key={`row2-first-${index}`} className="flex items-center">
-              <span className="font-heading text-7xl font-bold uppercase text-[#d4ff00] md:text-9xl">
-                {item}
-              </span>
-              <svg
-                width="48"
-                height="48"
-                viewBox="0 0 48 48"
-                fill="none"
-                className="mx-8 flex-shrink-0 text-gray-300 dark:text-zinc-800 md:mx-12"
-              >
-                <path
-                  d="M24 0L27.708 20.292L48 24L27.708 27.708L24 48L20.292 27.708L0 24L20.292 20.292L24 0Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
+            <span
+              key={`row2-first-${index}`}
+              className={`mx-6 text-5xl text-white md:mx-8 md:text-7xl ${
+                item.style === "script"
+                  ? "font-serif italic"
+                  : "font-sans font-bold"
+              }`}
+            >
+              {item.text}
+            </span>
           ))}
           {/* Duplicate set for seamless loop */}
           {items2.map((item, index) => (
-            <div key={`row2-second-${index}`} className="flex items-center">
-              <span className="font-heading text-7xl font-bold uppercase text-[#d4ff00] md:text-9xl">
-                {item}
-              </span>
-              <svg
-                width="48"
-                height="48"
-                viewBox="0 0 48 48"
-                fill="none"
-                className="mx-8 flex-shrink-0 text-gray-300 dark:text-zinc-800 md:mx-12"
-              >
-                <path
-                  d="M24 0L27.708 20.292L48 24L27.708 27.708L24 48L20.292 27.708L0 24L20.292 20.292L24 0Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
+            <span
+              key={`row2-second-${index}`}
+              className={`mx-6 text-5xl text-white md:mx-8 md:text-7xl ${
+                item.style === "script"
+                  ? "font-serif italic"
+                  : "font-sans font-bold"
+              }`}
+            >
+              {item.text}
+            </span>
           ))}
         </div>
       </div>
