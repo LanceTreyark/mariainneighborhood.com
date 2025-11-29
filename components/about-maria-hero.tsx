@@ -5,17 +5,46 @@ import { motion } from "framer-motion";
 
 export function AboutMariaHero() {
   return (
-    <section className="bg-[#f5e6e3] px-6 py-16">
-      <div className="mx-auto max-w-7xl">
-        <div className="grid items-center gap-12 lg:grid-cols-2">
-          {/* Left Side: Text Content */}
+    <section className="relative flex min-h-screen items-center overflow-hidden pt-20">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/about.jpg"
+          alt="About Maria"
+          fill
+          className="object-cover"
+          priority
+        />
+        {/* Pink gradient overlay from left */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#f5e6e3] via-[#f5e6e3]/80 via-50% to-transparent" />
+      </div>
+
+      {/* Content Container */}
+      <div className="relative z-10 mx-auto flex w-full max-w-6xl items-center px-6 py-12">
+        <div className="grid w-full items-center gap-12 lg:grid-cols-2">
+          {/* Left Side: Logo and Title */}
           <div className="space-y-8">
+            {/* Logo */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative h-32 w-full max-w-md md:h-40"
+            >
+              <Image
+                src="/logo.png"
+                alt="Maria in the Neighborhood"
+                fill
+                className="object-contain object-left"
+                priority
+              />
+            </motion.div>
+
             {/* Title with Icon */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
               className="flex items-center gap-3"
             >
               <div className="relative h-10 w-10">
@@ -26,45 +55,39 @@ export function AboutMariaHero() {
                   className="object-contain"
                 />
               </div>
-              <h2 className="font-sans text-4xl font-bold tracking-tight text-[#dcbbb4] md:text-5xl">
+              <h1 className="font-sans text-4xl font-bold tracking-tight text-[#dcbbb4] md:text-5xl">
                 About Maria
-              </h2>
+              </h1>
             </motion.div>
 
-            {/* Description Paragraphs */}
+            {/* Description */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="space-y-6"
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="space-y-4"
             >
-              <p className="text-lg leading-relaxed text-gray-600 md:text-xl">
-                Born in Rio de Janeiro and now calling La Jolla home, Maria
-                brings warmth, curiosity, and a knack for discovering people's
-                stories.
-              </p>
-              <p className="text-lg leading-relaxed text-gray-600 md:text-xl">
-                Her short-format videos spotlight local makers, neighbors, and
-                the places that make the town unique.
+              <p className="text-lg leading-relaxed text-gray-700 md:text-xl">
+                Born in Rio de Janeiro and now calling La Jolla home, Maria brings warmth, curiosity, 
+                and a knack for discovering people's stories.
               </p>
             </motion.div>
           </div>
 
-          {/* Right Side: Image */}
+          {/* Right Side: Maria Image */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex justify-center lg:justify-end"
           >
-            <div className="relative h-[400px] w-full max-w-md overflow-hidden rounded-2xl md:h-[500px]">
+            <div className="relative h-80 w-64 overflow-hidden rounded-2xl border-4 border-[#dcbbb4] md:h-96 md:w-80">
               <Image
-                src="/about.jpg"
+                src="/mariaProfile.jpg"
                 alt="Maria"
                 fill
                 className="object-cover"
+                priority
               />
             </div>
           </motion.div>

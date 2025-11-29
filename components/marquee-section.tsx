@@ -15,7 +15,19 @@ export function MarqueeSection() {
 
   return (
     <section className="relative overflow-hidden bg-[#c37173] py-8">
-      <div className="space-y-4">
+      {/* Pattern overlay with opacity */}
+      <div
+        className="absolute inset-0"
+        style={{
+          backgroundImage: "url(/pattrn.png)",
+          backgroundRepeat: "repeat-x",
+          backgroundPosition: "center",
+          backgroundSize: "auto 100%",
+          opacity: 0.2,
+        }}
+      />
+      
+      <div className="relative z-10 space-y-4">
         {/* First row - moving right */}
         <div className="flex animate-marquee-right items-center whitespace-nowrap">
           {/* First set */}
@@ -76,39 +88,6 @@ export function MarqueeSection() {
           ))}
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes marquee-right {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-
-        @keyframes marquee-left {
-          0% {
-            transform: translateX(-50%);
-          }
-          100% {
-            transform: translateX(0);
-          }
-        }
-
-        .animate-marquee-right {
-          animation: marquee-right 40s linear infinite;
-        }
-
-        .animate-marquee-left {
-          animation: marquee-left 40s linear infinite;
-        }
-
-        .animate-marquee-right:hover,
-        .animate-marquee-left:hover {
-          animation-play-state: paused;
-        }
-      `}</style>
     </section>
   );
 }
