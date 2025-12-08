@@ -2,27 +2,11 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { getLatestVideos } from "@/lib/videos-data";
 
 export function ReelsSection() {
   const [playingVideo, setPlayingVideo] = useState<string | null>(null);
-
-  const videos = [
-    {
-      id: "L5qVYoO5268",
-      title: "A taste of France",
-      duration: "8:45",
-    },
-    {
-      id: "L5qVYoO5268",
-      title: "Pedego Electric Bikes",
-      duration: "6:52",
-    },
-    {
-      id: "L5qVYoO5268",
-      title: "Eddie from PTC Boxing",
-      duration: "10:03",
-    },
-  ];
+  const videos = getLatestVideos(3);
 
   return (
     <section className="bg-gray-50 px-6 py-8">

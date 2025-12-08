@@ -12,33 +12,12 @@ import Link from "next/link";
 import { useState } from "react";
 import { ShareModal } from "./share-modal";
 import { motion } from "framer-motion";
+import { getFeaturedVideo, getLatestVideos } from "@/lib/videos-data";
 
 export function IntroSection() {
   const [isShareModalOpen, setIsShareModalOpen] = useState(false);
-
-  const episodes = [
-    {
-      id: 1,
-      title: "Bird Rock Fine Wine",
-      description: "Maria visits Ken from Bird Rock Fine Wine",
-      duration: "8:45",
-      thumbnail: "https://img.youtube.com/vi/L5qVYoO5268/default.jpg",
-    },
-    {
-      id: 2,
-      title: "Hidden Cove Café",
-      description: "Exploring the best coffee in La Jolla",
-      duration: "6:30",
-      thumbnail: "https://img.youtube.com/vi/L5qVYoO5268/default.jpg",
-    },
-    {
-      id: 3,
-      title: "Ocean View Bookshop",
-      description: "A tour of the local bookstore",
-      duration: "7:15",
-      thumbnail: "https://img.youtube.com/vi/L5qVYoO5268/default.jpg",
-    },
-  ];
+  const featuredVideo = getFeaturedVideo();
+  const episodes = getLatestVideos(3);
 
   return (
     <section className="relative bg-gray-50 px-6 py-8">
@@ -117,8 +96,8 @@ export function IntroSection() {
                     <iframe
                       width="100%"
                       height="100%"
-                      src="https://www.youtube.com/embed/L5qVYoO5268"
-                      title="YouTube video player"
+                      src={`https://www.youtube.com/embed/${featuredVideo.id}`}
+                      title={featuredVideo.title}
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                       allowFullScreen
                       className="h-full w-full"
@@ -126,13 +105,12 @@ export function IntroSection() {
                   </div>
 
                   <p className="text-sm text-gray-600">
-                    Maria visits Ken from Bird Rock Fine Wine in Bird Rock to
-                    explore his beautiful wine shop.
+                    {featuredVideo.description || featuredVideo.title}
                   </p>
 
                   <div className="flex flex-wrap gap-3">
                     <Link
-                      href="https://www.youtube.com/watch?v=L5qVYoO5268"
+                      href={featuredVideo.url}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 rounded-md bg-[#dcbbb4] px-6 py-2.5 text-sm font-medium text-black transition-colors hover:bg-[#ccaaa4]"
@@ -171,13 +149,15 @@ export function IntroSection() {
                         >
                           <div className="relative flex-shrink-0">
                             <img
-                              src={episode.thumbnail}
+                              src={`https://img.youtube.com/vi/${episode.id}/default.jpg`}
                               alt={episode.title}
                               className="h-16 w-24 rounded object-cover"
                             />
-                            <div className="absolute bottom-1 right-1 rounded bg-black/80 px-1 py-0.5 text-[10px] font-medium text-white">
-                              {episode.duration}
-                            </div>
+                            {episode.duration && (
+                              <div className="absolute bottom-1 right-1 rounded bg-black/80 px-1 py-0.5 text-[10px] font-medium text-white">
+                                {episode.duration}
+                              </div>
+                            )}
                           </div>
                           <div className="flex-1 space-y-1">
                             <div className="flex items-start gap-2">
@@ -188,9 +168,11 @@ export function IntroSection() {
                                 <h4 className="line-clamp-2 text-xs font-semibold text-gray-900">
                                   {episode.title}
                                 </h4>
-                                <p className="mt-0.5 line-clamp-1 text-[10px] text-gray-600">
-                                  {episode.description}
-                                </p>
+                                {episode.description && (
+                                  <p className="mt-0.5 line-clamp-1 text-[10px] text-gray-600">
+                                    {episode.description}
+                                  </p>
+                                )}
                               </div>
                             </div>
                           </div>
@@ -207,8 +189,8 @@ export function IntroSection() {
           <ShareModal
             isOpen={isShareModalOpen}
             onClose={() => setIsShareModalOpen(false)}
-            videoUrl="https://www.youtube.com/watch?v=L5qVYoO5268"
-            videoTitle="Maria visits Ken from Bird Rock Fine Wine in Bird Rock to explore his beautiful wine shop."
+            videoUrl={featuredVideo.url}
+            videoTitle={featuredVideo.title}
           />
         </div>
       </div>

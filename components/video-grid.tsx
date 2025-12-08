@@ -3,54 +3,11 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
+import { getAllVideos } from "@/lib/videos-data";
 
 export function VideoGrid() {
   const [playingVideo, setPlayingVideo] = useState<string | null>(null);
-
-  const videos = [
-    {
-      id: "L5qVYoO5268",
-      title: "Bird Rock Fine Wine",
-      description: "Maria visits Ken from Bird Rock Fine Wine",
-      duration: "8:45",
-      category: "Local Business",
-    },
-    {
-      id: "L5qVYoO5268",
-      title: "A Taste of France",
-      description: "Exploring French cuisine in La Jolla",
-      duration: "6:52",
-      category: "Food & Dining",
-    },
-    {
-      id: "L5qVYoO5268",
-      title: "Pedego Electric Bikes",
-      description: "Discovering eco-friendly transportation",
-      duration: "10:03",
-      category: "Local Business",
-    },
-    {
-      id: "L5qVYoO5268",
-      title: "Eddie from PTC Boxing",
-      description: "Meet the community fitness leader",
-      duration: "7:30",
-      category: "People",
-    },
-    {
-      id: "L5qVYoO5268",
-      title: "Hidden Cove Café",
-      description: "The best coffee spot in town",
-      duration: "5:45",
-      category: "Food & Dining",
-    },
-    {
-      id: "L5qVYoO5268",
-      title: "Sunset at the Pier",
-      description: "Capturing La Jolla's golden hour",
-      duration: "4:20",
-      category: "Events",
-    },
-  ];
+  const videos = getAllVideos();
 
   return (
     <section className="bg-gray-50 px-6 py-16">
