@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden pt-20">
+    <section className="relative flex min-h-[80vh] items-center overflow-hidden pt-12">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -14,52 +14,62 @@ export function Hero() {
           fill
           className="object-cover"
           priority
-        /> 
-        {/* Pink gradient overlay from left */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#dcbbb4] via-[#dcbbb4]/70 via-40% to-transparent" />
+        />
+
+        {/* Softer white-to-transparent fade */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/60 to-transparent" />
       </div>
 
-      {/* Content Container */}
-      <div className="relative z-10 mx-auto flex w-full max-w-5xl items-center px-6 py-12">
-        <div className="grid w-full items-center gap-12 lg:grid-cols-2">
-          {/* Left Side: Woman Image */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex justify-center lg:justify-start"
+      {/* Content */}
+      <div className="relative z-10 mx-auto flex w-full max-w-7xl items-center px-6">
+
+        {/* Maria Image */}
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="relative z-10 block md:block pointer-events-none"
+        >
+          <div
+            className="
+              relative
+              h-[260px] w-[160px]
+              sm:h-[320px] sm:w-[200px]
+              md:h-[735px] md:w-[455px]
+              lg:h-[875px] lg:w-[525px]
+              overflow-hidden
+              [mask-image:linear-gradient(to_bottom,black_66%,rgba(0,0,0,0.6)_80%,transparent)]
+            "
           >
-            <div className="relative h-64 w-64 overflow-hidden rounded-full border-4 border-[#dcbbb4] md:h-80 md:w-80">
-              <Image
-                src="/hero-img.jpeg"
-                alt="Maria"
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
-          </motion.div>
-
-          {/* Right Side: Logo */}
-          <div className="flex items-center justify-center text-center lg:justify-start lg:text-left">
-            {/* Logo */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="relative h-36 w-96 md:h-56 md:w-[560px]"
-            >
-              <Image
-                src="/logo.png"
-                alt="Maria in the Neighborhood"
-                fill
-                className="object-contain"
-                priority
-              />
-            </motion.div>
+            <Image
+              src="/mariaUmbrella.png"
+              alt="Maria"
+              fill
+              className="object-contain"
+              priority
+            />
           </div>
+        </motion.div>
+
+        {/* Logo */}
+        <div className="flex items-center justify-center text-center lg:justify-start lg:text-left">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="relative h-36 w-96 md:h-56 md:w-[560px]"
+          >
+            <Image
+              src="/logo.png"
+              alt="Maria in the Neighborhood"
+              fill
+              className="object-contain"
+              priority
+            />
+          </motion.div>
         </div>
-      </div>
+
+      </div> {/* ← MISSING CLOSING DIV (fixed) */}
     </section>
   );
 }
