@@ -1,4 +1,4 @@
-name: Update YouTube Videos
+name: Update Content (Videos & Listings)
 
 on:
   schedule:
@@ -7,7 +7,7 @@ on:
   workflow_dispatch: # Allow manual trigger
 
 jobs:
-  update-videos:
+  update-content:
     runs-on: ubuntu-latest
     
     steps:
@@ -29,9 +29,15 @@ jobs:
         run: |
           echo "YOUTUBE_API_KEY=${{ secrets.YOUTUBE_API_KEY }}" >> .env.local
           echo "YOUTUBE_CHANNEL_ID=${{ secrets.YOUTUBE_CHANNEL_ID }}" >> .env.local
+          if [ -n "${{ secrets.RAPIDAPI_KEY }}" ]; then
+            echo "RAPIDAPI_KEY=${{ secrets.RAPIDAPI_KEY }}" >> .env.local
+          fi
 
       - name: Update videos from YouTube
         run: npm run update-videos
+
+      - name: Update listings from Zillow
+        run: npm run update-listings
 
       - name: Check for changes
         id: verify-changed-files
@@ -47,12 +53,13 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add lib/videos-data.ts
-          git commit -m "🎬 Auto-update videos from YouTube [$(date +'%Y-%m-%d %H:%M')]"
+          git add lib/videos-data.ts lib/zillow-api.ts
+          git commit -m "🎬🏠 Auto-update content [$(date +'%Y-%m-%d %H:%M')]"
           git push
 
       - name: Deploy to production (if using Vercel)
         if: steps.verify-changed-files.outputs.changed == 'true'
         run: |
-          echo "Videos updated! Deployment will be triggered automatically."
-          echo "New videos count: $(grep -o '"id":' lib/videos-data.ts | wc -l)"
+          echo "Content updated! Deployment will be triggered automatically."
+          echo "Videos count: $(grep -o '"id":' lib/videos-data.ts | wc -l)"
+          echo "Listings count: $(grep -o '"zpid":' lib/zillow-api.ts | wc -l)"

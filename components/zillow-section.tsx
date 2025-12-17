@@ -21,7 +21,7 @@ export function ZillowSection() {
                 transition={{ duration: 0.8 }}
                 className="text-3xl font-bold text-gray-900"
               >
-                Explore La Jolla Homes
+                Explore La Jolla Homes with Maria
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, filter: "blur(10px)", y: 20 }}
@@ -30,23 +30,43 @@ export function ZillowSection() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-base leading-relaxed text-gray-600"
               >
-                Curated Zillow listings and a weekly featured home. Click to see
-                the full gallery and sign up for alerts.
+                From neighborhood stories to dream homes - let your local La Jolla expert guide your real estate journey.
               </motion.p>
               <div className="flex flex-wrap gap-3">
                 <Link
-                  href="/zillow"
+                  href="/real-estate"
                   className="flex items-center gap-2 rounded-md bg-[#dcbbb4] px-6 py-3 text-sm font-medium text-black transition-colors hover:bg-[#ccaaa4]"
+                  onClick={() => {
+                    // Analytics tracking
+                    if (typeof window !== 'undefined' && window.gtag) {
+                      window.gtag('event', 'homepage_real_estate_click', {
+                        page_location: window.location.href,
+                        cta_label: 'explore_homes_button',
+                        widget_position: 'zillow_section'
+                      });
+                    }
+                  }}
                 >
                   Explore La Jolla Homes
                   <ExternalLink size={16} />
                 </Link>
-                <Link
-                  href="/partner"
+                <button
+                  onClick={() => {
+                    // Analytics tracking
+                    if (typeof window !== 'undefined' && window.gtag) {
+                      window.gtag('event', 'maria_zillow_profile_click', {
+                        page_location: window.location.href,
+                        cta_label: 'zillow_profile_button',
+                        referrer_source: 'homepage_zillow_section'
+                      });
+                    }
+                    window.open('https://www.zillow.com/profile/maria%20woodsca', '_blank');
+                  }}
                   className="flex items-center gap-2 rounded-md border border-gray-300 bg-transparent px-6 py-3 text-sm font-medium text-gray-700 transition-colors hover:border-[#dcbbb4] hover:text-[#dcbbb4]"
                 >
-                  Partner with Maria
-                </Link>
+                  View Maria's Zillow Profile
+                  <ExternalLink size={16} />
+                </button>
               </div>
             </div>
           </div>

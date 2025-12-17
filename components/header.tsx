@@ -13,7 +13,7 @@ export function Header() {
   const menuItems = [
     { label: "Home", href: "/" },
     { label: "Videos", href: "/videos" },
-    { label: "Zillow", href: "/zillow" },
+    { label: "Real Estate", href: "/real-estate" },
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
   ];
