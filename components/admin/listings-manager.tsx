@@ -9,9 +9,13 @@ interface ListingsManagerProps {
   //onUpdate: (listings: ZillowListing[]) => void;
 }
 
-export default function ListingsManager({ initialListings, onUpdate }: ListingsManagerProps) {
+export default function ListingsManager({ initialListings }: ListingsManagerProps) {
   const [listings, setListings] = useState<ZillowListing[]>(initialListings);
   const [isEditing, setIsEditing] = useState(false);
+  const [isSaving, setIsSaving] = useState(false);
+//export default function ListingsManager({ initialListings, onUpdate }: ListingsManagerProps) {
+//  const [listings, setListings] = useState<ZillowListing[]>(initialListings);
+//  const [isEditing, setIsEditing] = useState(false);
 
   const addNewListing = () => {
     const newListing: ZillowListing = {
