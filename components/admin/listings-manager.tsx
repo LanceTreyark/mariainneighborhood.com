@@ -6,7 +6,7 @@ import { Plus, Save, Trash2 } from "lucide-react";
 
 interface ListingsManagerProps {
   initialListings: ZillowListing[];
-  onUpdate: (listings: ZillowListing[]) => void;
+  //onUpdate: (listings: ZillowListing[]) => void;
 }
 
 export default function ListingsManager({ initialListings, onUpdate }: ListingsManagerProps) {
