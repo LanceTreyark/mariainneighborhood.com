@@ -30,20 +30,18 @@ export function Hero() {
           transition={{ duration: 0.8 }}
           className="relative z-10 block md:block pointer-events-none"
         >
-          <div
-            className="
-              relative
-              -ml-18
-              sm:-ml-35
-              md:-ml-35
-              h-[260px] w-[160px]
-              sm:h-[320px] sm:w-[200px]
-              md:h-[735px] md:w-[455px]
-              lg:h-[875px] lg:w-[525px]
-              overflow-hidden
-              [mask-image:linear-gradient(to_bottom,black_66%,rgba(0,0,0,0.6)_80%,transparent)]
-            "
-          >
+      <div
+        class="
+          relative
+          -ml-52 sm:-ml-52 md:-ml-[150px] lg:ml-0
+          h-[620px] w-[420px]  
+          sm:h-[620px] sm:w-[420px]
+          md:h-[735px] md:w-[455px]
+          lg:h-[875px] lg:w-[525px]
+          overflow-hidden
+          [mask-image:linear-gradient(to_bottom,black_30%,rgba(0,0,0,0.6)_60%,transparent)]
+        "
+      >
             <Image
               src="/mariaUmbrella.png"
               alt="Maria"
@@ -60,7 +58,11 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative h-20 w-80 -ml-18 sm:-ml-35 lg:-ml-0 md:-ml-38 sm:h-50 sm:w-[500px] md:h-56 md:w-[560px]"
+            className="relative 
+        h-50 w-[210px] 
+        ml-[-134px] sm:-ml-40 md:-ml-49 lg:-ml-11 
+        sm:h-50 sm:w-[500px] 
+        md:h-56 md:w-[560px] "
           >
             <Image
               src="/logo.png"
@@ -72,7 +74,7 @@ export function Hero() {
           </motion.div>
         </div>
 
-      </div> {/* ← MISSING CLOSING DIV (fixed) */}
+      </div> 
     </section>
   );
 }
