@@ -71,11 +71,29 @@ export async function GET() {
     
     return NextResponse.json(listings);
     
-  } catch (error) {
+  } 
+  
+  catch (error: unknown) {
+  console.error('RapidAPI error:', error);
+
+  // Safely extract message
+  const message = error instanceof Error ? error.message : String(error);
+
+  return NextResponse.json(
+    { error: 'Failed to fetch listings via API', details: message },
+    { status: 500 }
+  );
+}
+
+  /*
+  catch (error) {
     console.error('RapidAPI error:', error);
     return NextResponse.json(
       { error: 'Failed to fetch listings via API', details: error.message },
       { status: 500 }
     );
   }
+*/
+
+
 }

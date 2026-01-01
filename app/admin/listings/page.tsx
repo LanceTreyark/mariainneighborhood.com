@@ -25,7 +25,7 @@ export default function AdminListingsPage() {
         
         <ListingsManager 
           initialListings={mariaCurrentListings}
-          onUpdate={handleUpdate}
+          //onUpdate={handleUpdate}
         />
         
         <div className="mt-8 bg-white rounded-lg border border-gray-200 p-6">

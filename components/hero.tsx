@@ -33,6 +33,9 @@ export function Hero() {
           <div
             className="
               relative
+              -ml-18
+              sm:-ml-35
+              md:-ml-35
               h-[260px] w-[160px]
               sm:h-[320px] sm:w-[200px]
               md:h-[735px] md:w-[455px]
@@ -57,7 +60,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative h-36 w-96 md:h-56 md:w-[560px]"
+            className="relative h-20 w-80 -ml-18 sm:-ml-35 lg:-ml-0 md:-ml-38 sm:h-50 sm:w-[500px] md:h-56 md:w-[560px]"
           >
             <Image
               src="/logo.png"
