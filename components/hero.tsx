@@ -31,7 +31,7 @@ export function Hero() {
           className="relative z-10 block md:block pointer-events-none"
         >
       <div
-        class="
+        className="
           relative
           -ml-52 sm:-ml-52 md:-ml-[150px] lg:ml-0
           h-[620px] w-[420px]  
