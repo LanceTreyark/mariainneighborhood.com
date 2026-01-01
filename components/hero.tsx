@@ -60,7 +60,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="relative 
         h-50 w-[210px] 
-        ml-[-134px] sm:-ml-40 md:-ml-49 lg:-ml-11 
+        ml-[-90px] sm:-ml-40 md:-ml-49 lg:-ml-11 
         sm:h-50 sm:w-[500px] 
         md:h-56 md:w-[560px] "
           >
