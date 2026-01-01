@@ -47,6 +47,31 @@ export default function ListingsManager({ initialListings }: ListingsManagerProp
     setListings(updated);
   };
 
+    const saveListings = async () => {
+    try {
+      setIsSaving(true);
+
+      const response = await fetch("/api/zillow-listings", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ listings }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Save failed");
+      }
+
+      console.log("Listings saved:", listings);
+      setIsEditing(false);
+      alert("Listings updated successfully!");
+    } catch (err) {
+      console.error("Save error:", err);
+      alert("Failed to update listings");
+    } finally {
+      setIsSaving(false);
+    }
+  };
+  /*
   const saveListings = async () => {
     try {
       const response = await fetch('/api/zillow-listings', {
@@ -64,6 +89,7 @@ export default function ListingsManager({ initialListings }: ListingsManagerProp
       alert('Failed to update listings');
     }
   };
+  */
 
   return (
     <div className="bg-white rounded-lg border border-gray-200 p-6">
