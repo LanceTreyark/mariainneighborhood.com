@@ -327,14 +327,14 @@ export function WeatherWidget() {
             <div className="space-y-3">
               <div className="flex items-center gap-2">
                 <MapPin size={16} className="text-[#dcbbb4]" />
-                <p className="text-sm font-semibold uppercase tracking-wide text-gray-700">
+                <a href="https://lajollamom.com/things-to-do-in-la-jolla/" target="_blank" rel="noopener noreferrer" ><p className="text-sm font-semibold uppercase tracking-wide text-gray-700">
                   Best of La Jolla
-                </p>
+                </p></a>
               </div>
               <div className="space-y-2 text-sm text-gray-600">
-                <p>Hidden Cove Café</p>
-                <p>Ocean View Bookshop</p>
-                <p>Pier Street Tacos</p>
+                <a href="https://www.opentable.com/dukes-la-jolla" target="_blank" rel="noopener noreferrer"><p>Duke's La Jolla - <i>Restaurants</i></p></a>
+                <a href="https://lajollamom.com/things-to-do-la-jolla-shores-beach/" target="_blank" rel="noopener noreferrer"><p>La Jolla Shores Beach - <i>Places</i></p></a>
+                <a href="https://www.opentable.com/r/javiers-la-jolla" target="_blank" rel="noopener noreferrer"><p>Javier's - La Jolla - <i>Restaurants</i></p></a>
               </div>
             </div>
 
