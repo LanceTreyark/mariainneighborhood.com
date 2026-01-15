@@ -22,7 +22,9 @@ export function AboutMariaHero() {
       {/* Content Container */}
       <div className="relative z-10 mx-auto flex w-full max-w-6xl items-center px-6 py-12">
         <div className="grid w-full items-center gap-12 lg:grid-cols-2">
-          {/* Left Side: Logo and Title */}
+          {/* Left Side: Empty Spacer */}
+          <div className="space-y-8"></div>
+          {/* right Side: Logo and Title */}
           <div className="space-y-8">
             {/* Logo */}
             <motion.div
