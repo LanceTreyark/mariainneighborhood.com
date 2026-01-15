@@ -313,7 +313,7 @@ export function WeatherWidget() {
               <div className="flex items-center gap-2">
                 <Calendar size={16} className="text-[#dcbbb4]" />
                 <p className="text-sm font-semibold uppercase tracking-wide text-gray-700">
-                  Neighborhood Calendar
+                  <a href="https://lajollabythesea.com/events/" target="_blank" rel="noopener noreferrer">Neighborhood Calendar</a>
                 </p>
               </div>
               <div className="space-y-2 text-sm text-gray-600">
