@@ -30,7 +30,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="relative 
-        h-50 w-[260px] 
+        h-80 w-[290px] 
         
         sm:h-50 sm:w-[500px] 
         md:h-56 md:w-[560px] "
