@@ -31,7 +31,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="relative 
         h-50 w-[260px] 
-        -ml-60 sm:-ml-60 md:-ml-65 lg:-ml-65
+        -ml-50 sm:-ml-50 md:-ml-50 lg:-ml-50
         sm:h-50 sm:w-[500px] 
         md:h-56 md:w-[560px] "
           >
