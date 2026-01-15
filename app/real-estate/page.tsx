@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { Header } from "@/components/header";
 import RealEstateHero from "@/components/real-estate-hero";
 import PropertySearch from "@/components/property-search";
-import FeaturedListings from "@/components/featured-listings";
+//import FeaturedListings from "@/components/featured-listings";
 
 import NeighborhoodGuide from "@/components/neighborhood-guide";
 import MariaExpertise from "@/components/maria-expertise";
@@ -22,7 +22,7 @@ export default function RealEstatePage() {
       <main className="min-h-screen">
         <RealEstateHero />
         <PropertySearch />
-        <FeaturedListings />
+        {/*<FeaturedListings />*/}
         <NeighborhoodGuide />
         <MariaExpertise />
         <TestimonialsSection />
