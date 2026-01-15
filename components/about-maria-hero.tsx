@@ -16,7 +16,7 @@ export function AboutMariaHero() {
           priority
         />
         {/* Pink gradient overlay from left */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#f5e6e3] via-[#f5e6e3]/80 via-50% to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-l from-[#f5e6e3]/80 via-[#f5e6e3]/80 via-10% to-transparent" />
       </div>
 
       {/* Content Container */}
@@ -75,6 +75,7 @@ export function AboutMariaHero() {
           </div>
 
           {/* Right Side: Maria Image */}
+          {/*
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -91,6 +92,7 @@ export function AboutMariaHero() {
               />
             </div>
           </motion.div>
+           */  }
         </div>
       </div>
     </section>
