@@ -14,7 +14,8 @@ export function MarqueeSection() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-[#c37173] py-8">
+    <section className="relative overflow-hidden bg-[#a19c9c] py-8">
+      {/* bg-[#c37173] */}
       {/* Pattern overlay with opacity */}
       <div
         className="absolute inset-0"
