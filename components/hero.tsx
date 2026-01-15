@@ -39,7 +39,7 @@ export function Hero() {
               src="/logo.png"
               alt="Maria in the Neighborhood"
               fill
-              className="object-contain"
+              className="object-contain saturate-200 contrast-100 drop-shadow-[0_2px_2px_rgba(0,0,0,0.30)]"
               priority
             />
           </motion.div>
