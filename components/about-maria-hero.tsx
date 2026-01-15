@@ -37,7 +37,7 @@ export function AboutMariaHero() {
                 src="/logo.png"
                 alt="Maria in the Neighborhood"
                 fill
-                className="object-contain object-left"
+                className="object-contain object-left saturate-200 contrast-100 drop-shadow-[0_2px_2px_rgba(0,0,0,0.30)] display-hidden"
                 priority
               />
             </motion.div>
@@ -57,7 +57,7 @@ export function AboutMariaHero() {
                   className="object-contain"
                 />
               </div>
-              <h1 className="font-sans text-4xl font-bold tracking-tight text-[#dcbbb4] md:text-5xl">
+              <h1 className="font-sans text-4xl font-bold tracking-tight text-[#f3afa1] md:text-5xl">
                 About Maria
               </h1>
             </motion.div>
