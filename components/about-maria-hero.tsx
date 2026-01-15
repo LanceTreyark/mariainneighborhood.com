@@ -23,19 +23,19 @@ export function AboutMariaHero() {
       <div className="relative z-10 mx-auto flex w-full max-w-6xl items-center px-6 py-12">
         <div className="grid w-full items-center gap-12 lg:grid-cols-2">
           {/* Left Side: Logo and Title */}
-          <div className="space-y-8 text-right items-end">
+          <div className="space-y-8">
             {/* Logo */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative ml-auto h-32 w-full max-w-md md:h-40"
+              className="relative h-32 w-full max-w-md md:h-40"
             >
               <Image
                 src="/logo.png"
                 alt="Maria in the Neighborhood"
                 fill
-                className="object-contain object-right"
+                className="object-contain object-left"
                 priority
               />
             </motion.div>
@@ -45,8 +45,7 @@ export function AboutMariaHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex items-center justify-end gap-3 flex-row-reverse"
-              /*className="flex items-center gap-3"*/
+              className="flex items-center gap-3"
             >
               <div className="relative h-10 w-10">
                 <Image
@@ -68,7 +67,7 @@ export function AboutMariaHero() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="space-y-4"
             >
-              <p className="text-lg leading-relaxed text-gray-700 md:text-xl text-right">
+              <p className="text-lg leading-relaxed text-gray-700 md:text-xl">
                 Born in Rio de Janeiro and now calling La Jolla home, Maria brings warmth, curiosity, 
                 and a knack for discovering people's stories.
               </p>
