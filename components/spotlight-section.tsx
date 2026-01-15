@@ -7,18 +7,18 @@ export function SpotlightSection() {
   const spotlights = [
     {
       title: "Event Spotlight",
-      description: "Sunset Concert at the Pier - family friendly, free entry",
-      image: "/spot1.jpeg",
+      description: "Art Exhibit - All Shall Be Well -Jan 14th-Mar 7th",
+      image: "/art.webp",
     },
     {
       title: "Local Spotlight",
-      description: "Pier Street Tacos - Maria's go-to after a surf",
-      image: "/spot2.jpeg",
+      description: "Pearl Street Tacos - Maria's go-to after a surf",
+      image: "/pearl.jpg",
     },
     {
       title: "People of La Jolla",
-      description: "Meet Carlos - Surf instructor and community mentor",
-      image: "/spot3.jpg",
+      description: "Meet Tim Bessell - Surfboard Artist, shaper and local legend",
+      image: "/timB.jpg",
     },
   ];
 
