@@ -16,7 +16,8 @@ export function AboutMariaHero() {
           priority
         />
         {/* Pink gradient overlay from left */}
-        <div className="absolute inset-0 bg-gradient-to-l from-[#f5e6e3]/80 via-[#f5e6e3]/80 via-10% to-transparent" />
+        {/*<div className="absolute inset-0 bg-gradient-to-l from-[#f5e6e3]/80 via-[#f5e6e3]/80 via-10% to-transparent" />*/}
+        <div className="absolute inset-0" />
       </div>
 
       {/* Content Container */}
