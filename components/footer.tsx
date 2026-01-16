@@ -1,9 +1,17 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Instagram, Youtube, Facebook, Mail, MapPin } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
+
+  const [subscriberEmail, setSubscriberEmail] = useState("");
+  const [subscribeStatus, setSubscribeStatus] = useState<
+    { type: "idle" | "sending" | "success" | "error"; message?: string }
+  >({ type: "idle" });
 
   const footerLinks = {
     explore: [
@@ -19,6 +27,35 @@ export function Footer() {
       { label: "Partner with Us", href: "/partner" },
     ],
   };
+
+  async function handleSubscribe(e: React.FormEvent) {
+    e.preventDefault();
+    if (!subscriberEmail) {
+      setSubscribeStatus({ type: "error", message: "Please enter your email." });
+      return;
+    }
+    setSubscribeStatus({ type: "sending" });
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: "Newsletter Subscriber",
+          email: subscriberEmail,
+          subject: "Newsletter Subscription",
+          message: "Please add me to the newsletter list (source: footer).",
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok || !data?.ok) {
+        throw new Error(data?.error || "Subscription failed");
+      }
+      setSubscribeStatus({ type: "success", message: "Subscribed! Please check your email for confirmation (if applicable)." });
+      setSubscriberEmail("");
+    } catch (err: any) {
+      setSubscribeStatus({ type: "error", message: err?.message || "Something went wrong." });
+    }
+  }
 
   return (
     <footer className="bg-black text-white">
@@ -134,19 +171,28 @@ export function Footer() {
             <p className="text-sm text-gray-400">
               Get the latest episodes and neighborhood news.
             </p>
-            <form className="flex gap-2">
+            <form className="flex gap-2" onSubmit={handleSubscribe}>
               <input
                 type="email"
                 placeholder="Your email"
+                value={subscriberEmail}
+                onChange={(e) => setSubscriberEmail(e.target.value)}
                 className="flex-1 rounded-md border border-zinc-800 bg-zinc-900 px-4 py-2 text-sm text-white placeholder-gray-500 focus:border-[#dcbbb4] focus:outline-none focus:ring-2 focus:ring-[#dcbbb4]/20"
               />
               <button
                 type="submit"
-                className="rounded-md bg-[#dcbbb4] px-6 py-2 text-sm font-medium text-black transition-colors hover:bg-[#ccaaa4]"
+                disabled={subscribeStatus.type === "sending"}
+                className="rounded-md bg-[#dcbbb4] px-6 py-2 text-sm font-medium text-black transition-colors hover:bg-[#ccaaa4] disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                Subscribe
+                {subscribeStatus.type === "sending" ? "Subscribing..." : "Subscribe"}
               </button>
             </form>
+            {subscribeStatus.type === "success" && (
+              <p className="mt-2 text-xs text-green-500">{subscribeStatus.message}</p>
+            )}
+            {subscribeStatus.type === "error" && (
+              <p className="mt-2 text-xs text-red-500">{subscribeStatus.message}</p>
+            )}
           </div>
         </div>
 
