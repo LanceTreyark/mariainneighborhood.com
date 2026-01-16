@@ -12,11 +12,33 @@ export function ContactSection() {
     type: "feature",
     message: "",
   });
+  const [status, setStatus] = useState<{ type: "idle" | "sending" | "success" | "error"; message?: string }>({ type: "idle" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
+    setStatus({ type: "sending" });
+    try {
+      const subject = `${formData.type} — ${formData.firstName}${formData.phone ? ` (${formData.phone})` : ""}`;
+      const message = formData.message;
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.firstName,
+          email: formData.email,
+          subject,
+          message,
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok || !data?.ok) {
+        throw new Error(data?.error || "Failed to send message");
+      }
+      setStatus({ type: "success", message: "Thanks! We received your message." });
+      setFormData({ firstName: "", email: "", phone: "", type: "feature", message: "" });
+    } catch (err: any) {
+      setStatus({ type: "error", message: err?.message || "Something went wrong" });
+    }
   };
 
   return (
@@ -110,10 +132,11 @@ export function ContactSection() {
             <div className="flex flex-wrap items-center gap-4">
               <button
                 type="submit"
-                className="flex items-center gap-2 rounded-md bg-[#dcbbb4] px-6 py-3 text-sm font-medium text-black transition-colors hover:bg-[#ccaaa4]"
+                disabled={status.type === "sending"}
+                className="flex items-center gap-2 rounded-md bg-[#dcbbb4] px-6 py-3 text-sm font-medium text-black transition-colors hover:bg-[#ccaaa4] disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 <Send size={16} />
-                Share Your Story
+                {status.type === "sending" ? "Sending..." : "Share Your Story"}
               </button>
               <a
                 href="/zillow"
@@ -123,6 +146,13 @@ export function ContactSection() {
               </a>
             </div>
 
+            {/* Feedback & Email */}
+            {status.type === "success" && (
+              <p className="text-sm text-green-700">{status.message}</p>
+            )}
+            {status.type === "error" && (
+              <p className="text-sm text-red-700">{status.message}</p>
+            )}
             {/* Email */}
             <p className="text-sm text-gray-600">
               Email:{" "}
