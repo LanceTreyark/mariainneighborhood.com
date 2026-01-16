@@ -12,12 +12,14 @@ export function SpotlightSection() {
       description: "Art Exhibit - All Shall Be Well -Jan 14th-Mar 7th",
       image: "/art.webp",
       href: "https://lajollabythesea.com/event-details/?id=art-exhibit-all-shall-be-well",
+      target: "_blank",
     },
     {
       title: "Local Spotlight",
       description: "Pearl Street Tacos - Maria's go-to after a surf",
       image: "/pearl.jpg",
       href: "https://www.google.com/search?q=pearl+street+tacos+la+jolla&rlz=1C1ONGR_enUS1085US1085&oq=pearl&gs_lcrp=EgZjaHJvbWUqCAgAEEUYJxg7MggIABBFGCcYOzIKCAEQLhixAxiABDIGCAIQRRhAMhMIAxAuGIMBGK8BGMcBGLEDGIAEMg0IBBAuGK8BGMcBGIAEMg0IBRAuGIMBGLEDGIAEMhAIBhAuGMcBGLEDGNEDGIAEMgYIBxBFGD3SAQgyMzMzajBqN6gCALACAA&sourceid=chrome&ie=UTF-8&lqi=ChtwZWFybCBzdHJlZXQgdGFjb3MgbGEgam9sbGFIoLzW0OeVgIAIWjEQAhADEAQYABgBGAIYAxgEIhtwZWFybCBzdHJlZXQgdGFjb3MgbGEgam9sbGEqAggDkgEKcmVzdGF1cmFudJoBRENpOURRVWxSUVVOdlpFTm9kSGxqUmpsdlQyeG9XV0pWWkZSa1JUVmFWa2R3VFZKdGJHbFZNbVJ2WVVjNVdsZ3hSUkFCugEHCgV0YWNvc-ABAPoBBQiUAhA_#rlimm=519367279425009795",
+      target: "_blank",
     },
     {
       title: "People of La Jolla",
