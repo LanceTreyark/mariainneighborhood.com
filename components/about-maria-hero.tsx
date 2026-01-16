@@ -9,7 +9,7 @@ export function AboutMariaHero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/IMG_8472.jpeg"
+          src="/IMG_8472.jpg"
           alt="About Maria"
           fill
           className="object-cover"
