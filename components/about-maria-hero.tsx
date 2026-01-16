@@ -38,7 +38,7 @@ export function AboutMariaHero() {
                 src="/logo.png"
                 alt="Maria in the Neighborhood"
                 fill
-                className="object-contain object-left saturate-200 contrast-100 drop-shadow-[0_2px_2px_rgba(0,0,0,0.30)] hidden"
+                className="object-contain object-left saturate-200 contrast-100 drop-shadow-[0_2px_2px_rgba(0,0,0,0.30)] display-none"
                 priority
               />
             </motion.div>
@@ -70,7 +70,7 @@ export function AboutMariaHero() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="space-y-4"
             >
-              <p className="text-lg leading-relaxed text-gray-700 md:text-xl">
+              <p className="text-lg leading-relaxed text-white md:text-xl">
                 Born in Rio de Janeiro and now calling La Jolla home, Maria brings warmth, curiosity, 
                 and a knack for discovering people's stories.
               </p>
