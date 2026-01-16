@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export function AboutSpotlightText() {
   return (
-    <section className="relative bg-[#d4898b] px-6 py-12 md:py-16">
+    <section className="relative bg-[#a19c9c] px-6 py-12 md:py-16">
       {/* Pattern overlay with opacity */}
       <div
         className="absolute inset-0"

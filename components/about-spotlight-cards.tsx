@@ -2,20 +2,29 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export function AboutSpotlightCards() {
   const spotlights = [
     {
       title: "Event Spotlight",
-      description: "Sunset Concert at the Pier - family friendly, free entry",
+      description: "Art Exhibit - All Shall Be Well -Jan 14th-Mar 7th",
+      image: "/art.webp",
+      href: "https://lajollabythesea.com/event-details/?id=art-exhibit-all-shall-be-well",
+      target: "_blank",
     },
     {
       title: "Local Spotlight",
-      description: "Pier Street Tacos - Maria's go-to after a surf",
+      description: "Pearl Street Tacos - Maria's go-to after a surf",
+      image: "/pearl.jpg",
+      href: "https://www.google.com/search?q=pearl+street+tacos+la+jolla&rlz=1C1ONGR_enUS1085US1085&oq=pearl&gs_lcrp=EgZjaHJvbWUqCAgAEEUYJxg7MggIABBFGCcYOzIKCAEQLhixAxiABDIGCAIQRRhAMhMIAxAuGIMBGK8BGMcBGLEDGIAEMg0IBBAuGK8BGMcBGIAEMg0IBRAuGIMBGLEDGIAEMhAIBhAuGMcBGLEDGNEDGIAEMgYIBxBFGD3SAQgyMzMzajBqN6gCALACAA&sourceid=chrome&ie=UTF-8&lqi=ChtwZWFybCBzdHJlZXQgdGFjb3MgbGEgam9sbGFIoLzW0OeVgIAIWjEQAhADEAQYABgBGAIYAxgEIhtwZWFybCBzdHJlZXQgdGFjb3MgbGEgam9sbGEqAggDkgEKcmVzdGF1cmFudJoBRENpOURRVWxSUVVOdlpFTm9kSGxqUmpsdlQyeG9XV0pWWkZSa1JUVmFWa2R3VFZKdGJHbFZNbVJ2WVVjNVdsZ3hSUkFCugEHCgV0YWNvc-ABAPoBBQiUAhA_#rlimm=519367279425009795",
+      target: "_blank",
     },
     {
       title: "People of La Jolla",
-      description: "Meet Carlos - Surf instructor and community mentor",
+      description: "Meet Tim Bessell - Surfboard Artist, shaper and local legend",
+      image: "/timB.jpg",
+      href: "/videos/",
     },
   ];
 
@@ -26,31 +35,38 @@ export function AboutSpotlightCards() {
           {/* Left Side: Spotlight Items */}
           <div className="space-y-8">
             {spotlights.map((spotlight, index) => (
-              <motion.div
+              <Link
                 key={spotlight.title}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.15 }}
-                className="flex items-start gap-4"
+                href={spotlight.href}
+                className="block"
+                target={spotlight.href.startsWith("http") ? "_blank" : undefined}
+                rel={spotlight.href.startsWith("http") ? "noopener noreferrer" : undefined}
               >
-                <div className="relative mt-1 h-8 w-8 flex-shrink-0">
-                  <Image
-                    src="/asterisk.png"
-                    alt=""
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-                <div>
-                  <h3 className="mb-2 text-2xl font-bold text-gray-600 md:text-3xl">
-                    {spotlight.title}
-                  </h3>
-                  <p className="text-base leading-relaxed text-gray-500 md:text-lg">
-                    {spotlight.description}
-                  </p>
-                </div>
-              </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.15 }}
+                  className="flex items-start gap-4"
+                >
+                  <div className="relative mt-1 h-8 w-8 flex-shrink-0">
+                    <Image
+                      src="/asterisk.png"
+                      alt=""
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="mb-2 text-2xl font-bold text-gray-600 md:text-3xl">
+                      {spotlight.title}
+                    </h3>
+                    <p className="text-base leading-relaxed text-gray-500 md:text-lg">
+                      {spotlight.description}
+                    </p>
+                  </div>
+                </motion.div>
+              </Link>
             ))}
           </div>
 
