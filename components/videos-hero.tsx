@@ -16,7 +16,7 @@ export function VideosHero() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#f5e6e3] via-[#f5e6e3]/80 via-50% to-transparent" />
+        <div className="absolute inset-0 " />
       </div>
 
       {/* Content */}
