@@ -21,19 +21,18 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 mx-auto flex w-full max-w-7xl items-center justify-center px-6">
+      <div className="relative z-10 mx-auto flex w-full max-w-7xl items-center justify-start px-6">
 
         {/* Logo */}
-        <div className="flex items-center justify-center text-center lg:justify-start lg:text-left">
+        <div className="flex items-center justify-center text-center sm:justify-center lg:justify-start lg:text-left w-full sm:w-2/3 lg:w-1/3">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative 
-        h-80 w-[290px] 
-        
-        sm:h-50 sm:w-[500px] 
-        md:h-56 md:w-[560px] "
+            className="relative w-full 
+        h-80 
+        sm:h-50 
+        md:h-56"
           >
             <Image
               src="/logo.png"
