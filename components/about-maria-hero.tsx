@@ -9,7 +9,7 @@ export function AboutMariaHero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/IMG_3984.jpeg"
+          src="/pano.jpeg"
           alt="About Maria"
           fill
           className="object-cover"
@@ -60,7 +60,7 @@ export function AboutMariaHero() {
                   className="object-contain"
                 />
               </div>
-              <h1 className="font-sans text-4xl font-bold tracking-tight text-[#f3afa1] drop-shadow-[0_2px_2px_rgba(0,0,0,0.30)] md:text-5xl">
+              <h1 className="font-sans text-4xl font-bold tracking-tight text-[#ecdf62] drop-shadow-[0_2px_2px_rgba(0,0,0,0.30)] md:text-5xl">
                 About Maria
               </h1>
             </motion.div>
@@ -72,7 +72,7 @@ export function AboutMariaHero() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="space-y-4"
             >
-              <p className="text-lg leading-relaxed text-white md:text-xl">
+              <p className="text-lg leading-relaxed text-[#ecdf62] md:text-xl">
                 Born in Rio de Janeiro and now calling La Jolla home, Maria brings warmth, curiosity,
                 and a knack for discovering people's stories.
               </p>
