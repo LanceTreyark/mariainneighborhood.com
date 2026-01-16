@@ -29,7 +29,8 @@ export default function RealEstateHero() {
           priority
         />
         {/* Pink gradient overlay from left */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#dcbbb4] via-[#dcbbb4]/70 via-40% to-transparent" />
+        { /*<div className="absolute inset-0 bg-gradient-to-r from-[#dcbbb4] via-[#dcbbb4]/70 via-40% to-transparent" /> */}
+        <div className="absolute inset-0" />
       </div>
 
       {/* Content Container */}
@@ -93,7 +94,7 @@ export default function RealEstateHero() {
           >
             <div className="relative h-80 w-64 overflow-hidden rounded-3xl border-4 border-[#dcbbb4] md:h-96 md:w-80">
               <Image
-                src="/mariaProfile.jpg"
+                src="/sothebyProfile.jpg"
                 alt="Maria Woods - La Jolla Real Estate Expert"
                 fill
                 className="object-cover"
