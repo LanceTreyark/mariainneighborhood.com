@@ -28,7 +28,8 @@ export function AboutMariaHero() {
           {/* right Side: Logo and Title */}
           <div className="space-y-8">
             {/* Logo */}
-            <motion.div
+            {/* 
+                        <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -42,6 +43,7 @@ export function AboutMariaHero() {
                 priority
               />
             </motion.div>
+            */}
 
             {/* Title with Icon */}
             <motion.div
@@ -71,7 +73,7 @@ export function AboutMariaHero() {
               className="space-y-4"
             >
               <p className="text-lg leading-relaxed text-white md:text-xl">
-                Born in Rio de Janeiro and now calling La Jolla home, Maria brings warmth, curiosity, 
+                Born in Rio de Janeiro and now calling La Jolla home, Maria brings warmth, curiosity,
                 and a knack for discovering people's stories.
               </p>
             </motion.div>
