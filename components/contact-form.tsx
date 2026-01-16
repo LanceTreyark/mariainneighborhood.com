@@ -11,11 +11,26 @@ export function ContactForm() {
     subject: "",
     message: "",
   });
+  const [status, setStatus] = useState<{ type: "idle" | "sending" | "success" | "error"; message?: string }>({ type: "idle" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
+    setStatus({ type: "sending" });
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      const data = await res.json();
+      if (!res.ok || !data?.ok) {
+        throw new Error(data?.error || "Failed to send message");
+      }
+      setStatus({ type: "success", message: "Message sent! We'll be in touch soon." });
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } catch (err: any) {
+      setStatus({ type: "error", message: err?.message || "Something went wrong" });
+    }
   };
 
   const handleChange = (
@@ -126,11 +141,19 @@ export function ContactForm() {
 
                 <button
                   type="submit"
-                  className="flex w-full items-center justify-center gap-2 rounded-lg bg-[#dcbbb4] px-6 py-3 text-base font-medium text-black transition-colors hover:bg-[#ccaaa4]"
+                  disabled={status.type === "sending"}
+                  className="flex w-full items-center justify-center gap-2 rounded-lg bg-[#dcbbb4] px-6 py-3 text-base font-medium text-black transition-colors hover:bg-[#ccaaa4] disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   <Send size={20} />
-                  Send Message
+                  {status.type === "sending" ? "Sending..." : "Send Message"}
                 </button>
+
+                {status.type === "success" && (
+                  <p className="text-sm text-green-700">{status.message}</p>
+                )}
+                {status.type === "error" && (
+                  <p className="text-sm text-red-700">{status.message}</p>
+                )}
               </form>
             </div>
           </motion.div>
