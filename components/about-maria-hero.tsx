@@ -72,7 +72,7 @@ export function AboutMariaHero() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="space-y-4"
             >
-              <p className="text-lg leading-relaxed text-[#164906]  md:text-xl">
+              <p className="text-lg leading-relaxed text-[#E4DDC2]  md:text-xl drop-shadow-[0_2px_2px_rgba(0,0,0,0.30)] ">
                 Born in Rio de Janeiro and now calling La Jolla home, Maria brings warmth, curiosity,
                 and a knack for discovering people's stories.
               </p>
