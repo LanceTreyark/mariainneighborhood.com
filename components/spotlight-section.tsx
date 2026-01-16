@@ -34,7 +34,12 @@ export function SpotlightSection() {
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-6 md:grid-cols-3">
           {spotlights.map((spotlight, index) => (
-            <Link href={spotlight.href} className="block">
+            <Link
+              href={spotlight.href}
+              className="block"
+              target={spotlight.href.startsWith("http") ? "_blank" : undefined}
+              rel={spotlight.href.startsWith("http") ? "noopener noreferrer" : undefined}
+            >
             <motion.div
               //key={spotlight.title}
               initial={{ opacity: 0, y: 20 }}
