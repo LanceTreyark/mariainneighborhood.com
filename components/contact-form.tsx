@@ -183,7 +183,7 @@ export function ContactForm() {
                       href="mailto:maria@mariainneighborhood.com"
                       className="text-gray-600 hover:text-[#dcbbb4]"
                     >
-                      mariainneighborhood@gmail.com
+                      mariaintheneighborhood@gmail.com
                     </a>
                   </div>
                 </div>
