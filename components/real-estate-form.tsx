@@ -15,6 +15,7 @@ export default function RealEstateForm() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string>("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -28,11 +29,29 @@ export default function RealEstateForm() {
       source: 'real_estate_form'
     });
 
-    // Simulate form submission (replace with actual API call)
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    try {
+      const subject = `Real Estate ${formData.interest} — ${formData.name}${formData.phone ? ` (${formData.phone})` : ""}`;
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject,
+          message: formData.message || `Interest: ${formData.interest}`,
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok || !data?.ok) {
+        throw new Error(data?.error || "Failed to send message");
+      }
+      setIsSubmitted(true);
+      setErrorMessage("");
+    } catch (err: any) {
+      setErrorMessage(err?.message || "Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleZillowClick = () => {
@@ -197,6 +216,9 @@ export default function RealEstateForm() {
                     </>
                   )}
                 </button>
+                {errorMessage && (
+                  <p className="mt-2 text-sm text-red-700">{errorMessage}</p>
+                )}
               </form>
             </motion.div>
 
