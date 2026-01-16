@@ -183,7 +183,7 @@ export function ContactForm() {
                       href="mailto:maria@mariainneighborhood.com"
                       className="text-gray-600 hover:text-[#dcbbb4]"
                     >
-                      maria@mariainneighborhood.com
+                      mariainneighborhood@gmail.com
                     </a>
                   </div>
                 </div>
@@ -195,10 +195,10 @@ export function ContactForm() {
                   <div>
                     <h3 className="mb-1 font-semibold text-gray-900">Phone</h3>
                     <a
-                      href="tel:+15551234567"
+                      href="tel:+15109743886"
                       className="text-gray-600 hover:text-[#dcbbb4]"
                     >
-                      (555) 123-4567
+                      (510) 974-3886
                     </a>
                   </div>
                 </div>
