@@ -41,7 +41,7 @@ export function IntroSection() {
               {/* CTA and Social Links */}
               <div className="flex flex-wrap items-center gap-4">
                 <Link
-                  href="/latest-episode"
+                  href="/videos"
                   className="flex items-center gap-2 rounded-md bg-[#dcbbb4] px-6 py-3 text-sm font-medium text-black transition-colors hover:bg-[#ccaaa4]"
                 >
                   <Play size={16} fill="black" />
