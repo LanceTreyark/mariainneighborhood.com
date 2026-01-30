@@ -156,7 +156,7 @@ export function Footer() {
                 <FaTiktok size={20} />
               </a>
               <a
-                href="mailto:hello@mariaintheighborhood.com"
+                href="mailto:mariaintheighborhood@gmail.com"
                 className="flex h-12 w-12 items-center justify-center rounded-full bg-zinc-900 transition-colors hover:bg-[#dcbbb4] hover:text-black"
               >
                 <Mail size={20} />
