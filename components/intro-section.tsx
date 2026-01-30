@@ -67,7 +67,7 @@ export function IntroSection() {
                 </Link>
 
                 <Link
-                  href="www.tiktok.com/@maria.in.the.neig"
+                  href="https://www.tiktok.com/@maria.in.the.neig"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm font-medium text-gray-700 transition-colors hover:text-[#dcbbb4]"
