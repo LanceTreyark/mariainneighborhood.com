@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Instagram, Youtube, Facebook, Mail, MapPin } from "lucide-react";
+import { FaTiktok } from "react-icons/fa";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -131,7 +132,7 @@ export function Footer() {
             </h4>
             <div className="flex gap-4">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/maria_woods_realtor/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-12 w-12 items-center justify-center rounded-full bg-zinc-900 transition-colors hover:bg-[#dcbbb4] hover:text-black"
@@ -139,7 +140,7 @@ export function Footer() {
                 <Instagram size={20} />
               </a>
               <a
-                href="https://youtube.com"
+                href="https://www.youtube.com/@MariaintheNeighborhood"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-12 w-12 items-center justify-center rounded-full bg-zinc-900 transition-colors hover:bg-[#dcbbb4] hover:text-black"
@@ -147,12 +148,12 @@ export function Footer() {
                 <Youtube size={20} />
               </a>
               <a
-                href="https://facebook.com"
+                href="https://www.tiktok.com/@maria.in.the.neig"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-12 w-12 items-center justify-center rounded-full bg-zinc-900 transition-colors hover:bg-[#dcbbb4] hover:text-black"
               >
-                <Facebook size={20} />
+                <FaTiktok size={20} />
               </a>
               <a
                 href="mailto:hello@mariaintheighborhood.com"
