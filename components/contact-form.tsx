@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Send, Instagram, Youtube, TikTok, Mail, Phone, MapPin } from "lucide-react";
+import { Send, Instagram, Youtube, Mail, Phone, MapPin } from "lucide-react";
+import { FaTiktok } from "react-icons/fa";
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -250,7 +251,7 @@ export function ContactForm() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 rounded-lg border border-gray-200 p-4 transition-colors hover:border-[#dcbbb4] hover:bg-[#f5e6e3]"
                 >
-                  <TikTok size={24} className="text-gray-700" />
+                  <FaTiktok size={24} className="text-gray-700" />
                   <span className="font-medium text-gray-900">TikTok</span>
                 </a>
               </div>
