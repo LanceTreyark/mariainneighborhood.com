@@ -160,7 +160,7 @@ export function ContactSection() {
                 href="mailto:hello@mariaintheighborhood.com"
                 className="text-[#dcbbb4] hover:underline"
               >
-                hello@mariaintheighborhood.com
+                mariaintheighborhood@gmail.com
               </a>
             </p>
           </form>

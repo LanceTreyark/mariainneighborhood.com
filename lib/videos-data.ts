@@ -15,6 +15,13 @@ function getYouTubeId(url: string): string {
 
 // Main videos list - automatically updated from YouTube
 export const videos: Video[] = [
+    {
+    "id": "Ht-BRe3x-Fs",
+    "title": "Maria in La Jolla ❤️",
+    "description": "",
+    "url": "https://www.youtube.com/watch?v=Ht-BRe3x-Fs",
+    "category": "Community"
+  },
   {
     "id": "EkOMiKzfft0",
     "title": "rom South Korea to La Jolla 🇰🇷➡️🇺🇸 | Patr",
