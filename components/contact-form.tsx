@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Send, Instagram, Youtube, Facebook, Mail, Phone, MapPin } from "lucide-react";
+import { Send, Instagram, Youtube, TikTok, Mail, Phone, MapPin } from "lucide-react";
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -195,10 +195,10 @@ export function ContactForm() {
                   <div>
                     <h3 className="mb-1 font-semibold text-gray-900">Phone</h3>
                     <a
-                      href="tel:+15109743886"
+                      href="tel:+16194961250"
                       className="text-gray-600 hover:text-[#dcbbb4]"
                     >
-                      (510) 974-3886
+                      (619) 496-1250
                     </a>
                   </div>
                 </div>
@@ -225,7 +225,7 @@ export function ContactForm() {
 
               <div className="space-y-4">
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/maria_woods_realtor/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 rounded-lg border border-gray-200 p-4 transition-colors hover:border-[#dcbbb4] hover:bg-[#f5e6e3]"
@@ -235,7 +235,7 @@ export function ContactForm() {
                 </a>
 
                 <a
-                  href="https://www.youtube.com/channel/UC1JW75QcwNSsCMAUz5qgUYQ"
+                  href="https://www.youtube.com/@MariaintheNeighborhood"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 rounded-lg border border-gray-200 p-4 transition-colors hover:border-[#dcbbb4] hover:bg-[#f5e6e3]"
@@ -245,13 +245,13 @@ export function ContactForm() {
                 </a>
 
                 <a
-                  href="https://facebook.com"
+                  href="https://www.tiktok.com/@maria.in.the.neig"    
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 rounded-lg border border-gray-200 p-4 transition-colors hover:border-[#dcbbb4] hover:bg-[#f5e6e3]"
                 >
-                  <Facebook size={24} className="text-gray-700" />
-                  <span className="font-medium text-gray-900">Facebook</span>
+                  <TikTok size={24} className="text-gray-700" />
+                  <span className="font-medium text-gray-900">TikTok</span>
                 </a>
               </div>
             </div>

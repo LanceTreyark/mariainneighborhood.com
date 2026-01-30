@@ -25,21 +25,21 @@ export const videos: Video[] = [
   {
     "id": "EkOMiKzfft0",
     "title": "rom South Korea to La Jolla 🇰🇷➡️🇺🇸 | Patr",
-    "description": "In this episode, Maria sits down with Patrick, the owner of Pearl Street Cleaners located at 454 Pearl St, La Jolla, CA 92037 🧺🏖️ Patrick shares his incredible journey from South Korea to La Jolla 🇰🇷➡️🇺🇸 and how he built his business from the ground up through hard work, dedication, and passion for serving the community. We also dive into Patrick’s personal life, what motivates him, and how he enjoys spending his free time outside of work 🌿☕. This is a heartfelt conversation about perseverance, family, and the true meaning of community.",
+    "description": "In this episode, Maria sits down with Patrick, the owner of Pearl Street Cleaners located at 454 Pearl St, La Jolla, CA 92037 🧺🏖️...",
     "url": "https://www.youtube.com/watch?v=EkOMiKzfft0",
     "category": "Community"
   },
   {
     "id": "UjWa1l6yHMA",
     "title": "Coffee, Flowers & Community 🌸 Inside La Jolla’s Beloved Flower Pot Café",
-    "description": "I had the absolute pleasure of interviewing Gloria & Amanda, the wonderful owners of The Flower Pot Café & Bakery in La Jolla ☕🥐 This charming, community-focused spot is loved for its cozy, floral-filled ambiance, exceptional organic coffee roasted in-house, and fresh, delicious food—from gourmet sandwiches and hearty breakfasts to truly standout pastries 🌿✨ In this episode, Gloria and Amanda share their journey, their favorite local spots, and what makes The Flower Pot such a special part of the La Jolla community 💛",
+    "description": "I had the absolute pleasure of interviewing Gloria & Amanda, the wonderful owners of The Flower Pot Café & Bakery in La Jolla... ",
     "url": "https://www.youtube.com/watch?v=UjWa1l6yHMA",
     "category": "Community"
   },
   {
     "id": "4YDJmU9p840",
     "title": "🌍 From Nigeria to the United States: Father Clement’s Journey of Faith ✝️",
-    "description": "🎙️ In this interview, Maria speaks with Father Clement from Nigeria, who shares his inspiring journey to becoming a priest. He talks about his upbringing, his calling to the priesthood, and his path from Nigeria to building his life and ministry in the United States.✨ A heartfelt conversation about faith, purpose, and cultural transition. 👉 Please like, follow, and subscribe for more inspiring stories from the community.",
+    "description": "🎙️ In this interview, Maria speaks with Father Clement from Nigeria, who shares his inspiring journey to becoming a priest...",
     "url": "https://www.youtube.com/watch?v=4YDJmU9p840",
     "category": "Community"
   },

@@ -49,7 +49,7 @@ export function IntroSection() {
                 </Link>
 
                 <Link
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/maria_woods_realtor/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm font-medium text-gray-700 transition-colors hover:text-[#dcbbb4]"
@@ -58,7 +58,7 @@ export function IntroSection() {
                 </Link>
 
                 <Link
-                  href="https://youtube.com"
+                  href="https://www.youtube.com/@MariaintheNeighborhood"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm font-medium text-gray-700 transition-colors hover:text-[#dcbbb4]"
@@ -67,12 +67,12 @@ export function IntroSection() {
                 </Link>
 
                 <Link
-                  href="https://facebook.com"
+                  href="www.tiktok.com/@maria.in.the.neig"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm font-medium text-gray-700 transition-colors hover:text-[#dcbbb4]"
                 >
-                  Facebook
+                  TikTok
                 </Link>
               </div>
             </div>
