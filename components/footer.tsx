@@ -104,6 +104,7 @@ export function Footer() {
           </div>
 
           {/* Community Links */}
+          {/*
           <div className="space-y-4">
             <h4 className="text-sm font-bold uppercase tracking-wider text-[#dcbbb4]">
               Community
@@ -122,6 +123,7 @@ export function Footer() {
             </ul>
           </div>
         </div>
+            */}
 
         {/* Middle Section - Social & Newsletter */}
         <div className="grid gap-8 border-b border-zinc-800 py-12 md:grid-cols-2">

@@ -335,6 +335,12 @@ export function WeatherWidget() {
                 <a href="https://www.opentable.com/dukes-la-jolla" target="_blank" rel="noopener noreferrer"><p>Duke's La Jolla - <i>Restaurants</i></p></a>
                 <a href="https://lajollamom.com/things-to-do-la-jolla-shores-beach/" target="_blank" rel="noopener noreferrer"><p>La Jolla Shores Beach - <i>Places</i></p></a>
                 <a href="https://www.opentable.com/r/javiers-la-jolla" target="_blank" rel="noopener noreferrer"><p>Javier's - La Jolla - <i>Restaurants</i></p></a>
+                <a href="https://birdrockcoffee.com/cafes/la-jolla" target="_blank" rel="noopener noreferrer"><p> Bird Rock Coffee Roasters - <i>Café / Casual</i></p></a>
+                <a href="https" target="_blank" rel="noopener noreferrer"><p>Parisien Gourmandises - <i>Bakery / Patisserie</i></p></a>
+                <a href="https" target="_blank" rel="noopener noreferrer"><p>Eddie V’s Prime Seafood  - <i>Restaurants / Seafood</i></p></a>
+                <a href="https" target="_blank" rel="noopener noreferrer"><p>Le Coq - <i>French / Bar</i></p></a>
+                <a href="https" target="_blank" rel="noopener noreferrer"><p>Paradisaea - <i>Californian / Bar</i></p></a>
+
               </div>
             </div>
 
