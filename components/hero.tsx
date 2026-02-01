@@ -34,12 +34,12 @@ export function Hero() {
         {/*
          <div className="flex items-center justify-center text-center sm:justify-center lg:justify-start lg:text-left w-full sm:w-2/3 lg:w-1/3">
         */}
-        <div className="flex items-center justify-center text-center sm:justify-start lg:justify-start lg:text-left ">
+        <div className="flex items-center justify-start text-left">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative w-auto h-[55vh]"
+            className="relative w-auto h-[18vh] sm:h-[24vh]"
             style={{ aspectRatio: '1' }}
           >
             <Image
