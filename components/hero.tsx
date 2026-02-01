@@ -32,9 +32,9 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="relative w-full 
         h-40 
-        sm:h-50 
-        md:h-56
-        lg:h-56"
+        sm:h-40 
+        md:h-40
+        lg:h-40"
           >
             <Image
               /*src="/logo.png"*/
