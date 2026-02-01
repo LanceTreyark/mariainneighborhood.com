@@ -10,7 +10,7 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <Image
           /*src="/hero.jpg"*/
-          src="/heroV3.JPG"
+          src="/mariaHeroV4.JPG"
           alt="La Jolla aerial view"
           fill
           className="object-cover"
