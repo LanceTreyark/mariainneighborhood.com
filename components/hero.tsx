@@ -34,7 +34,7 @@ export function Hero() {
         h-40 
         sm:h-50 
         md:h-56
-        lg:h-72"
+        lg:h-56"
           >
             <Image
               /*src="/logo.png"*/
