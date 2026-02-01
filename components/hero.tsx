@@ -33,7 +33,8 @@ export function Hero() {
             className="relative w-full 
         h-80 
         sm:h-50 
-        md:h-56"
+        md:h-56
+        lg:h-72"
           >
             <Image
               /*src="/logo.png"*/
