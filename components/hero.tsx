@@ -18,7 +18,7 @@ export function Hero() {
         />
 
         {/* Softer white-to-transparent fade */}
-        <div className="absolute inset-0 bg-gradient-to-l from-white/50 via-white/10 to-transparent" />
+        <div className="absolute inset-0 " />
       </div>
 
       {/* Content */}
