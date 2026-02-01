@@ -104,12 +104,14 @@ export function Footer() {
           </div>
 
           {/* Community Links */}
-          {/*
+        {/*
           <div className="space-y-4">
             <h4 className="text-sm font-bold uppercase tracking-wider text-[#dcbbb4]">
               Community
             </h4>
             <ul className="space-y-3">
+            
+              
               {footerLinks.community.map((link) => (
                 <li key={link.href}>
                   <Link
@@ -122,8 +124,9 @@ export function Footer() {
               ))}
             </ul>
           </div>
+          */}
         </div>
-            */}
+            
 
         {/* Middle Section - Social & Newsletter */}
         <div className="grid gap-8 border-b border-zinc-800 py-12 md:grid-cols-2">
