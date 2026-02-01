@@ -30,7 +30,11 @@ export function Hero() {
         sm:h-40 
         md:h-40
         lg:h-40 */}
-        <div className="flex items-center justify-center text-center sm:justify-center lg:justify-start lg:text-left w-full sm:w-2/3 lg:w-1/3">
+
+        {/*
+         <div className="flex items-center justify-center text-center sm:justify-center lg:justify-start lg:text-left w-full sm:w-2/3 lg:w-1/3">
+        */}
+        <div className="flex items-center justify-center text-center sm:justify-center lg:justify-start lg:text-left ">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
