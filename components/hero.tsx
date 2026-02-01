@@ -9,7 +9,7 @@ export function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          {/*src="/hero.jpg"*/}
+          /*src="/hero.jpg"*/
           src="/heroV3.JPG"
           alt="La Jolla aerial view"
           fill
@@ -36,7 +36,7 @@ export function Hero() {
         md:h-56"
           >
             <Image
-              {/*src="/logo.png"*/}
+              /*src="/logo.png"*/
               src="/minLogoV2.jpeg"
               alt="Maria in the Neighborhood"
               fill
