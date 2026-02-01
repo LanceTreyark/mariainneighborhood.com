@@ -25,16 +25,18 @@ export function Hero() {
       <div className="relative z-10 mx-auto flex w-full max-w-7xl items-center justify-start px-6">
 
         {/* Logo */}
+        {/*        
+        h-40 
+        sm:h-40 
+        md:h-40
+        lg:h-40 */}
         <div className="flex items-center justify-center text-center sm:justify-center lg:justify-start lg:text-left w-full sm:w-2/3 lg:w-1/3">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="relative w-full 
-        h-40 
-        sm:h-40 
-        md:h-40
-        lg:h-40"
+"
           >
             <Image
               /*src="/logo.png"*/
