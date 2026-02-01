@@ -31,7 +31,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="relative w-full 
-        h-80 
+        h-40 
         sm:h-50 
         md:h-56
         lg:h-72"
