@@ -19,7 +19,7 @@ export function VideoGrid() {
           transition={{ duration: 0.8 }}
           className="mb-12"
         >
-          <h2 className="mb-4 text-4xl font-bold text-gray-900">All Videos</h2>
+          <h2 className="mb-4 text-4xl font-bold text-gray-900">Stories</h2>
           <p className="text-lg text-gray-600">
             Browse through Maria's collection of neighborhood stories
           </p>
