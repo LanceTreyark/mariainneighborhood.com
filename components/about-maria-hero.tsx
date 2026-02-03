@@ -12,7 +12,7 @@ export function AboutMariaHero() {
           src="/IMG_3984.jpeg"
           alt="About Maria"
           fill
-          className="object-cover"
+          className="object-cover object-bottom"
           priority
         />
         {/* Pink gradient overlay from left */}
