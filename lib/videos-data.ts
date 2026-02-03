@@ -15,7 +15,14 @@ function getYouTubeId(url: string): string {
 
 // Main videos list - automatically updated from YouTube
 export const videos: Video[] = [
-    {
+  {
+    "id": "i5hr9bin4ZQ",
+    "title": "Green Light on the Horizon",
+    "description": "Maria neighborhood here in San Diego I witnessed something magical — the green light in the horizon . It felt surreal, like ...",
+    "url": "https://www.youtube.com/watch?v=i5hr9bin4ZQ",
+    "category": "Events"
+  },
+  {
     "id": "Ht-BRe3x-Fs",
     "title": "Maria in La Jolla ❤️",
     "description": "",
@@ -91,13 +98,6 @@ export const videos: Video[] = [
     "description": "It was so much fun learning more about the sport and the incredible energy at their gym 5755 La Jolla Blvd, La Jolla, CA ...",
     "url": "https://www.youtube.com/watch?v=6hH2ERLsXio",
     "category": "People"
-  },
-  {
-    "id": "i5hr9bin4ZQ",
-    "title": "Green Light on the Horizon",
-    "description": "Maria neighborhood here in San Diego I witnessed something magical — the green light in the horizon . It felt surreal, like ...",
-    "url": "https://www.youtube.com/watch?v=i5hr9bin4ZQ",
-    "category": "Events"
   },
   {
     "id": "d6QbGWAEGGE",
