@@ -9,7 +9,7 @@ export function AboutMariaHero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/IMG_1343.jpeg"
+          src="/IMG_3984.jpeg"
           alt="About Maria"
           fill
           className="object-cover"
@@ -46,6 +46,7 @@ export function AboutMariaHero() {
             */}
 
             {/* Title with Icon */}
+            {/*
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -64,8 +65,10 @@ export function AboutMariaHero() {
                 About Maria
               </h1>
             </motion.div>
+            */}
 
             {/* Description */}
+            {/* 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -77,6 +80,7 @@ export function AboutMariaHero() {
                 and a knack for discovering people's stories.
               </p>
             </motion.div>
+            */}
           </div>
 
           {/* Right Side: Maria Image */}
