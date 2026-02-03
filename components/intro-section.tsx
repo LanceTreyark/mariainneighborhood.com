@@ -78,6 +78,7 @@ export function IntroSection() {
             </div>
 
             {/* Video of the Week */}
+            {/*
             <div className="space-y-6">
               <motion.h2
                 initial={{ opacity: 0, filter: "blur(10px)", y: 20 }}
@@ -88,7 +89,7 @@ export function IntroSection() {
               >
                 Video of the Week
               </motion.h2>
-
+              */}
               <div className="flex flex-col gap-4 lg:flex-row">
                 {/* Video Player and Controls */}
                 <div className="flex-1 space-y-4">
