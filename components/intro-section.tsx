@@ -79,7 +79,7 @@ export function IntroSection() {
 
             {/* Video of the Week */}
             
-            <div className="space-y-6">
+            <div className="space-y-4">
               {/*
               <motion.h2
                 initial={{ opacity: 0, filter: "blur(10px)", y: 20 }}
