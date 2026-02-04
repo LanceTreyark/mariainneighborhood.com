@@ -20,7 +20,7 @@ export function VideosHero() {
       </div>
 
       {/* Content */}
-      {/*
+    
       <div className="relative z-10 mx-auto w-full max-w-7xl px-6 py-16">
         <div className="max-w-3xl">
           <motion.div
@@ -29,14 +29,16 @@ export function VideosHero() {
             transition={{ duration: 0.8 }}
             className="flex items-center gap-4 mb-6"
           >
+            {/*
             <div className="rounded-full bg-[#dcbbb4] p-4">
               <Play size={32} fill="black" className="text-black" />
             </div>
-            <h1 className="text-5xl font-bold tracking-tight text-gray-900 md:text-6xl lg:text-7xl">
-              Videos
+            */}
+            <h1 className="text-5xl font-bold tracking-tight text-white md:text-6xl lg:text-7xl">
+              The Neighborhood
             </h1>
           </motion.div>
-          
+            {/*
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -45,9 +47,11 @@ export function VideosHero() {
           >
             Explore La Jolla through Maria's lens. Discover local stories, hidden gems, and the vibrant community that makes this neighborhood special.
           </motion.p>
+           */}
         </div>
+       
       </div>
-      */}
+      
     </section>
     
   );
