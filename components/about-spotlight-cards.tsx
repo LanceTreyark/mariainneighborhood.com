@@ -80,7 +80,7 @@ export function AboutSpotlightCards() {
           >
             <div className="relative h-[400px] w-full max-w-lg md:h-[500px]">
               <Image
-                src="/rose.png"
+                src="/IMG_9538x.JPG"
                 alt="Rose"
                 fill
                 className="object-contain"
