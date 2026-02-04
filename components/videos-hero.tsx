@@ -34,7 +34,7 @@ export function VideosHero() {
               <Play size={32} fill="black" className="text-black" />
             </div>
             */}
-            <h1 className="text-5xl items-center tracking-tight text-white md:text-6xl lg:text-7xl">
+            <h1 className="text-xl items-center tracking-tight text-white md:text-6xl lg:text-7xl">
               The Neighborhood
             </h1>
           </motion.div>
