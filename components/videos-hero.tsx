@@ -6,7 +6,7 @@ import { Play } from "lucide-react";
 
 export function VideosHero() {
   return (
-    <section className="relative flex min-h-[60vh] items-center overflow-hidden pt-20">
+    <section className="relative flex min-h-[60vh] items-end overflow-hidden pt-20 pb-16">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -22,12 +22,12 @@ export function VideosHero() {
       {/* Content */}
     
       <div className="relative z-10 mx-auto w-full max-w-7xl px-6 py-16">
-        <div className="max-w-3xl">
+        <div className="mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="flex items-center gap-4 mb-6"
+            className="flex items-center justify-center gap-4 mb-6"
           >
             {/*
             <div className="rounded-full bg-[#dcbbb4] p-4">
