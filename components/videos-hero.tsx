@@ -10,8 +10,8 @@ export function VideosHero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/hero.jpg"
-          alt="Videos"
+          src="/SANLB.jpg"
+          alt="Videos Header - An Adobe Style Mansion"
           fill
           className="object-cover"
           priority
@@ -20,6 +20,7 @@ export function VideosHero() {
       </div>
 
       {/* Content */}
+      {/*
       <div className="relative z-10 mx-auto w-full max-w-7xl px-6 py-16">
         <div className="max-w-3xl">
           <motion.div
@@ -46,6 +47,8 @@ export function VideosHero() {
           </motion.p>
         </div>
       </div>
+      */}
     </section>
+    
   );
 }
