@@ -40,7 +40,7 @@ export function ContactHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl leading-relaxed text-[#dcbbb4] md:text-2xl"
+            className="text-xl leading-relaxed text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] md:text-2xl"
           >
             Have a story to share? Want to collaborate? Let's connect and explore La Jolla together.
           </motion.p>
