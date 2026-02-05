@@ -36,7 +36,7 @@ export default function RealEstateHero() {
       {/* Content Container */}
       <div className="relative z-10 mx-auto flex w-full max-w-6xl items-center justify-center px-6 py-12">
          
-        <div className="flex flex-col items-center gap-4">
+        <div className="flex flex-col items-center gap-6">
         
           {/* Left Side: Content */}
          {/*}
@@ -86,7 +86,7 @@ export default function RealEstateHero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex justify-center lg:justify-end"
           >
-            <div className="relative h-80 w-64 overflow-hidden rounded-3xl border-4 border-[#dcbbb4] md:h-96 md:w-80">
+            <div className="relative h-90 w-74 overflow-hidden rounded-3xl border-4 border-[#dcbbb4] md:h-96 md:w-80">
               <Image
                 src="/sothebyProfile.jpg"
                 alt="Maria Woods - La Jolla Real Estate Expert"
