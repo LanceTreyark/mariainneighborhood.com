@@ -31,7 +31,7 @@ export function ContactHero() {
             <div className="rounded-full bg-[#ffffff] p-4">
               <Mail size={32} className="text-black" />
             </div>
-            <h1 className="text-5xl font-bold tracking-tight text-gray-900 md:text-6xl lg:text-7xl">
+            <h1 className="text-5xl font-bold tracking-tight text-white md:text-6xl lg:text-7xl">
               Get in Touch
             </h1>
           </motion.div>
@@ -40,7 +40,7 @@ export function ContactHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl leading-relaxed text-gray-700 md:text-2xl"
+            className="text-xl leading-relaxed text-white md:text-2xl"
           >
             Have a story to share? Want to collaborate? Let's connect and explore La Jolla together.
           </motion.p>
