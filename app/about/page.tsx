@@ -12,7 +12,7 @@ export default function AboutPage() {
   return (
     <>
       <Header />
-      <AboutMariaHero />
+      <AboutMariaHero2 />
       <AboutSpotlightText />
       <IntroSection />
       <AboutSpotlightCards />
