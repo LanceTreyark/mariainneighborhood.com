@@ -12,7 +12,7 @@ export function AboutMariaHero2() {
           src="/redSeat.jpg"
           alt="About Maria"
           fill
-          className="object-cover object-bottom"
+          className="object-cover object-top"
           priority
         />
         {/* Pink gradient overlay from left */}
@@ -23,9 +23,7 @@ export function AboutMariaHero2() {
       {/* Content Container */}
       <div className="relative z-10 mx-auto flex w-full max-w-6xl items-center px-6 py-12">
         <div className="grid w-full items-center gap-12 lg:grid-cols-2">
-          {/* Left Side: Empty Spacer */}
-          <div className="space-y-8"></div>
-          {/* right Side: Logo and Title */}
+          {/* Left Side: Text Content */}
           <div className="space-y-8">
             {/* Logo */}
             
@@ -83,25 +81,8 @@ export function AboutMariaHero2() {
             
           </div>
 
-          {/* Right Side: Maria Image */}
-          {/*
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex justify-center lg:justify-end"
-          >
-            <div className="relative h-80 w-64 overflow-hidden rounded-2xl border-4 border-[#dcbbb4] md:h-96 md:w-80">
-              <Image
-                src="/mariaProfile.jpg"
-                alt="Maria"
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
-          </motion.div>
-           */  }
+          {/* Right Side: Empty Spacer */}
+          <div className="space-y-8"></div>
         </div>
       </div>
     </section>
