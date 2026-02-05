@@ -121,10 +121,10 @@ export default function MariaExpertise() {
             <div className="relative">
               <div className="relative h-80 w-full overflow-hidden rounded-2xl border-4 border-[#dcbbb4]">
                 <Image
-                  src="/IMG_1343.jpeg"
+                  src="/pro.jpg"
                   alt="Maria Woods - La Jolla Real Estate Expert"
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                 />
               </div>
               
