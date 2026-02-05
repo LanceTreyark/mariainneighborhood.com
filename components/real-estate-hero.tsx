@@ -84,9 +84,9 @@ export default function RealEstateHero() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex justify-center "
+            className="flex justify-center w-full md:w-auto"
           >
-            <div className="relative h-[500px] w-[400px] overflow-hidden rounded-3xl border-4 border-[#dcbbb4] md:h-[600px] md:w-[480px]">
+            <div className="relative aspect-[4/5] w-3/4 overflow-hidden rounded-3xl border-4 border-[#dcbbb4] md:h-[600px] md:w-[480px]">
               <Image
                 src="/sothebyProfile.jpg"
                 alt="Maria Woods - La Jolla Real Estate Expert"
