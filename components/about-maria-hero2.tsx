@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-export function AboutMariaHero() {
+export function AboutMariaHero2() {
   return (
     <section className="relative flex min-h-screen items-center overflow-hidden pt-20">
       {/* Background Image */}
