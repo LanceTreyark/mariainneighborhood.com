@@ -10,7 +10,7 @@ export function ContactHero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images.jpeg"
+          src="/bungalo.png"
           alt="Contact"
           fill
           className="object-cover"
