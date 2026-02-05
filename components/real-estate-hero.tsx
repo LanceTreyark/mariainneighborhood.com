@@ -34,9 +34,9 @@ export default function RealEstateHero() {
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 mx-auto flex w-full max-w-6xl items-center px-6 py-12">
+      <div className="relative z-10 mx-auto flex w-full max-w-6xl items-center justify-center px-6 py-12">
          
-        <div className=" items-center ">
+        <div className="flex flex-col items-center gap-4">
         
           {/* Left Side: Content */}
          {/*}
