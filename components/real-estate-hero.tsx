@@ -13,7 +13,7 @@ export default function RealEstateHero() {
         referrer_source: 'real_estate_page'
       });
     }
-    
+
     window.open('https://www.zillow.com/profile/maria%20woodsca', '_blank');
   };
 
@@ -35,10 +35,15 @@ export default function RealEstateHero() {
 
       {/* Content Container */}
       <div className="relative z-10 mx-auto flex w-full max-w-6xl items-center px-6 py-12">
-        <div className="grid w-full items-center gap-12 lg:grid-cols-2">
+         
+        <div className=" items-center ">
+        
           {/* Left Side: Content */}
+         {/*}
           <div className="space-y-8">
+            */}
             {/* Title with Icon */}
+            {/*
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -57,8 +62,9 @@ export default function RealEstateHero() {
                 Real Estate
               </h1>
             </motion.div>
-
+            */}
             {/* Description */}
+            {/*
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -69,22 +75,10 @@ export default function RealEstateHero() {
                 From neighborhood stories to dream homes - let Maria guide your La Jolla real estate journey with local expertise you can trust.
               </p>
             </motion.div>
-
-            {/* CTA Button */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 0.8 }}
-            >
-              <button
-                onClick={handleZillowClick}
-                className="rounded-md bg-black px-8 py-4 text-lg font-medium text-white transition-colors hover:bg-gray-800"
-              >
-                Connect with Maria on Zillow
-              </button>
-            </motion.div>
+              */}
+          {/*
           </div>
-
+            */}
           {/* Right Side: Maria Image */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
@@ -101,6 +95,19 @@ export default function RealEstateHero() {
                 priority
               />
             </div>
+          </motion.div>
+          {/* CTA Button */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8, duration: 0.8 }}
+          >
+            <button
+              onClick={handleZillowClick}
+              className="rounded-md bg-black px-8 py-4 text-lg font-medium text-white transition-colors hover:bg-gray-800"
+            >
+              Connect with Maria on Zillow
+            </button>
           </motion.div>
         </div>
       </div>
