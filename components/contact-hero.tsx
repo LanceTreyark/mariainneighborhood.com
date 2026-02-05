@@ -10,13 +10,13 @@ export function ContactHero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/hero.jpg"
+          src="/images.jpeg"
           alt="Contact"
           fill
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#f5e6e3] via-[#f5e6e3]/80 via-50% to-transparent" />
+        <div className="absolute inset-0 " />
       </div>
 
       {/* Content */}
@@ -28,7 +28,7 @@ export function ContactHero() {
             transition={{ duration: 0.8 }}
             className="mb-6 flex items-center gap-4"
           >
-            <div className="rounded-full bg-[#dcbbb4] p-4">
+            <div className="rounded-full bg-[#ffffff] p-4">
               <Mail size={32} className="text-black" />
             </div>
             <h1 className="text-5xl font-bold tracking-tight text-gray-900 md:text-6xl lg:text-7xl">
