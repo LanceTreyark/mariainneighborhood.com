@@ -1,5 +1,5 @@
 import { Header } from "@/components/header";
-import { AboutMariaHero } from "@/components/about-maria-hero";
+import { AboutMariaHero2 } from "@/components/about-maria-hero2";
 import { AboutSpotlightText } from "@/components/about-spotlight-text";
 import { IntroSection } from "@/components/intro-section";
 import { AboutSpotlightCards } from "@/components/about-spotlight-cards";
