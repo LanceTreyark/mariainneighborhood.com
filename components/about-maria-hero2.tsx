@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export function AboutMariaHero2() {
     return (
-        <section className="relative flex min-h-screen items-center overflow-hidden pt-20">
+        <section className="relative flex min-h-screen items-center overflow-hidden pt-20 lg:items-start lg:pt-32">
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <Image
