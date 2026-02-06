@@ -58,13 +58,9 @@ export default function NeighborhoodGuide() {
                 ) : (
                   <>
                     <img
-                      src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
+                      src={`https://img.youtube.com/vi/${video.id}/mqdefault.jpg`}
                       alt={video.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
-                      onError={(e) => {
-                        // Fallback to standard quality if maxres fails
-                        e.currentTarget.src = `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`;
-                      }}
                     />
                     
                     {/* Gradient Overlay */}
