@@ -332,9 +332,9 @@ export function WeatherWidget() {
                 </p></a>
               </div>
               <div className="space-y-2 text-sm text-gray-600">
-                <a href="https://www.opentable.com/dukes-la-jolla" target="_blank" rel="noopener noreferrer"><p>Duke's La Jolla - <i>Restaurants</i></p></a>
+                <a href="https://www.dukeslajolla.com/" target="_blank" rel="noopener noreferrer"><p>Duke's La Jolla - <i>Restaurants</i></p></a>
                 <a href="https://lajollamom.com/things-to-do-la-jolla-shores-beach/" target="_blank" rel="noopener noreferrer"><p>La Jolla Shores Beach - <i>Places</i></p></a>
-                <a href="https://www.opentable.com/r/javiers-la-jolla" target="_blank" rel="noopener noreferrer"><p>Javier's - La Jolla - <i>Restaurants</i></p></a>
+                <a href="https://www.javiersfinestfoods.com/" target="_blank" rel="noopener noreferrer"><p>Javier's - La Jolla - <i>Restaurants</i></p></a>
                 <a href="https://birdrockcoffee.com/cafes/la-jolla" target="_blank" rel="noopener noreferrer"><p> Bird Rock Coffee Roasters - <i>Café</i></p></a>
                 <a href="https://www.parisiengourmandises.com" target="_blank" rel="noopener noreferrer"><p>Parisien Gourmandises - <i>Bakery</i></p></a>
                 <a href="https://www.eddiev.com/home" target="_blank" rel="noopener noreferrer"><p>Eddie V’s Prime Seafood  - <i>Restaurants</i></p></a>

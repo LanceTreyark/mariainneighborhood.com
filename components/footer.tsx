@@ -18,7 +18,7 @@ export function Footer() {
     explore: [
       { label: "About Maria", href: "/about" },
       { label: "Latest Videos", href: "/videos" },
-      { label: "La Jolla Homes", href: "/zillow" },
+      { label: "La Jolla Homes", href: "/real-estate" },
       { label: "Contact", href: "/contact" },
     ],
     community: [
