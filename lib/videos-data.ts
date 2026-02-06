@@ -31,7 +31,7 @@ export const videos: Video[] = [
   },
   {
     "id": "EkOMiKzfft0",
-    "title": "rom South Korea to La Jolla 🇰🇷➡️🇺🇸 | Patr",
+    "title": "From South Korea to La Jolla 🇰🇷➡️🇺🇸 | Patr",
     "description": "In this episode, Maria sits down with Patrick, the owner of Pearl Street Cleaners located at 454 Pearl St, La Jolla, CA 92037 🧺🏖️...",
     "url": "https://www.youtube.com/watch?v=EkOMiKzfft0",
     "category": "Community"
