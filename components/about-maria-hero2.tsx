@@ -9,7 +9,7 @@ export function AboutMariaHero2() {
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="/redSeat.jpg"
+                    src="/newAbout.jpeg"
                     alt="About Maria"
                     fill
                     className="object-cover object-top"
@@ -23,25 +23,11 @@ export function AboutMariaHero2() {
             {/* Content Container */}
             <div className="relative z-10 mx-auto flex w-full max-w-6xl items-center px-6 py-12">
                 <div className="grid w-full items-center gap-12 lg:grid-cols-2">
-                    {/* Left Side: Text Content */}
+                    {/* Left Side: empty spacer */}
+                    <div className="space-y-8"></div>
+
+                    {/* Right Side: Empty Spacer */}
                     <div className="space-y-8">
-                        {/* Logo */}
-                        {/*
-                        <motion.div
-                            initial={{ opacity: 0, y: 30 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: 0.2 }}
-                            className="relative h-32 w-full max-w-md md:h-40"
-                        >
-                            <Image
-                                src="/logo.png"
-                                alt="Maria in the Neighborhood"
-                                fill
-                                className="object-contain object-left saturate-200 contrast-100 drop-shadow-[0_2px_2px_rgba(0,0,0,0.30)] display-none"
-                                priority
-                            />
-                        </motion.div>
-                        */}
 
                         {/* Title with Icon */}
 
@@ -81,8 +67,6 @@ export function AboutMariaHero2() {
 
                     </div>
 
-                    {/* Right Side: Empty Spacer */}
-                    <div className="space-y-8"></div>
                 </div>
             </div>
         </section>
