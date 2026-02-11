@@ -11,10 +11,10 @@ export function AboutMaria() {
         <div className="rounded-lg border border-gray-200 bg-gradient-to-br from-white to-gray-50 p-8">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-center">
             {/* Image */}
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0 order-1 lg:order-1">
               <div className="relative h-64 w-64 overflow-hidden rounded-lg">
                 <Image
-                  src="/mariaProfile.jpg"
+                  src="/newAbout.jpeg"
                   alt="Maria"
                   fill
                   className="object-cover"
@@ -23,7 +23,7 @@ export function AboutMaria() {
             </div>
 
             {/* Content */}
-            <div className="flex-1 space-y-4">
+            <div className="flex-1 space-y-4 order-2 lg:order-2 lg:pl-12">
               <motion.h2
                 initial={{ opacity: 0, filter: "blur(10px)", y: 20 }}
                 whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
