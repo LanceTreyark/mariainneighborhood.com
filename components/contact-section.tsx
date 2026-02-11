@@ -157,15 +157,15 @@ export function ContactSection() {
             <p className="text-sm text-gray-600">
               Email:{" "}
               <a
-                href="mailto:mariaintheighborhood@gmail.com"
+                href="mailto:mariaintheneighborhood@gmail.com"
                 className="text-[#dcbbb4] hover:underline"
               >
-                mariaintheighborhood@gmail.com
+                mariaintheneighborhood@gmail.com
               </a>
             </p>
           </form>
         </div>
-      </div>
+      </div>S
     </section>
   );
 }

@@ -181,7 +181,7 @@ export function ContactForm() {
                   <div>
                     <h3 className="mb-1 font-semibold text-gray-900">Email</h3>
                     <a
-                      href="mailto:maria@mariainneighborhood.com"
+                      href="mailto:mariaintheneighborhood@gmail.com"
                       className="text-gray-600 hover:text-[#dcbbb4]"
                     >
                       mariaintheneighborhood@gmail.com
