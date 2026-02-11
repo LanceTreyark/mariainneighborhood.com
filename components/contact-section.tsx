@@ -157,7 +157,7 @@ export function ContactSection() {
             <p className="text-sm text-gray-600">
               Email:{" "}
               <a
-                href="mailto:hello@mariaintheighborhood.com"
+                href="mailto:mariaintheighborhood@gmail.com"
                 className="text-[#dcbbb4] hover:underline"
               >
                 mariaintheighborhood@gmail.com
