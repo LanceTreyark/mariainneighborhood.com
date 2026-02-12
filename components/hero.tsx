@@ -13,7 +13,7 @@ export function Hero() {
           src="/mariaHeroV4.JPG"
           alt="La Jolla aerial view"
           fill
-          className="object-cover object-[calc(50%_-_10px)_68%]"
+          className="object-cover object-[calc(50%_-_13px)_65%]"
           priority
         />
 
