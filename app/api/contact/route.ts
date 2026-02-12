@@ -37,7 +37,7 @@ export async function POST(req: Request) {
       path: "/usr/sbin/sendmail",
     });
 
-    const toAddress = process.env.CONTACT_TO || "mariainthenighborhood@gmail.com, treyarkmedia@gmail.com";
+    const toAddress = process.env.CONTACT_TO || "mariaintheneighborhood@gmail.com, treyarkmedia@gmail.com";
     const fromAddress = process.env.CONTACT_FROM || "service@vineform.com";
 
     const plainText = `New contact form submission\n\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\n\nMessage:\n${message}`;
