@@ -14,7 +14,7 @@ export function MissionStatement() {
           transition={{ duration: 0.8 }}
           className="mb-6 flex justify-center"
         >
-          <div className="relative h-14 w-40">
+          <div className="relative h-14 w-40 md:h-20 md:w-56 lg:h-20 lg:w-56">
             <Image
               src="/logo.png"
               alt="Maria in the Neighborhood"
