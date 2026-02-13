@@ -39,7 +39,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative w-auto h-[28vh] sm:h-[35vh] md:h-[40vh] lg:h-[50vh] "
+            className="relative w-auto h-[15vh] sm:h-[20vh] md:h-[30vh] lg:h-[30vh] "
             style={{ aspectRatio: '1' }}
           >
             <Image
@@ -47,7 +47,7 @@ export function Hero() {
               src="/squareLogo.jpeg"
               alt="Maria in the Neighborhood"
               fill
-              className="object-contain saturate-200 contrast-100 drop-shadow-[0_2px_2px_rgba(0,0,0,0.30)]"
+              className="object-contain drop-shadow-[0_2px_2px_rgba(0,0,0,0.30)]"
               priority
             />
           </motion.div>
