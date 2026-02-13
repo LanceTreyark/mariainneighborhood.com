@@ -12,7 +12,7 @@ export function Header() {
 
   const menuItems = [
     { label: "Home", href: "/" },
-    { label: "Videos", href: "/videos" },
+    { label: "Stories", href: "/videos" },
     { label: "Real Estate", href: "/real-estate" },
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
