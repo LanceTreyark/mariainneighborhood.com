@@ -13,7 +13,7 @@ export function Hero() {
           src="/mariaHeroV4.JPG"
           alt="La Jolla aerial view"
           fill
-          className="object-cover object-[calc(50%_-_40px)_65%] md:object-[center_65%] lg:md:object-[center_65%]"
+          className="object-cover object-[calc(50%_-_55px)_65%] md:object-[center_65%] lg:md:object-[center_65%]"
           priority
         />
 
@@ -26,7 +26,7 @@ export function Hero() {
 
         {/* Logo */}
 
-        <div className="flex items-center justify-center text-center -translate-x-[40px]">
+        <div className="flex items-center justify-center text-center -translate-x-[55px] ">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
