@@ -1,5 +1,6 @@
 import { Header } from "@/components/header";
 import { Hero } from "@/components/hero";
+import { MissionStatement } from "@/components/mission-statement";
 import { AboutMariaHero } from "@/components/about-maria-hero";
 import { IntroSection } from "@/components/intro-section";
 import { WeatherWidget } from "@/components/weather-widget";
@@ -15,6 +16,7 @@ export default function Home() {
     <>
       <Header />
       <Hero />
+      <MissionStatement />
       <WeatherWidget />
       <IntroSection />
       <MarqueeSection />
