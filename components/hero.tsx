@@ -39,7 +39,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative w-auto h-[30vh] sm:h-[35vh] md:h-[40vh] lg:h-[50vh] -translate-y-[8px]"
+            className="relative w-auto h-[28vh] sm:h-[35vh] md:h-[40vh] lg:h-[50vh] -translate-y-[8px]"
             style={{ aspectRatio: '1' }}
           >
             <Image
