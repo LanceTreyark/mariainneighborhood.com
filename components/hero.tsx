@@ -22,19 +22,11 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 mx-auto flex w-full max-w-7xl items-center justify-start px-6">
+      <div className="relative z-10 mx-auto flex w-full max-w-7xl items-center justify-center px-6">
 
         {/* Logo */}
-        {/*        
-        h-40 
-        sm:h-40 
-        md:h-40
-        lg:h-40 */}
 
-        {/*
-         <div className="flex items-center justify-center text-center sm:justify-center lg:justify-start lg:text-left w-full sm:w-2/3 lg:w-1/3">
-        */}
-        <div className="flex items-center justify-start text-left">
+        <div className="flex items-center justify-center text-center -translate-x-[40px]">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
