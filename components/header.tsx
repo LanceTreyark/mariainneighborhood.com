@@ -38,7 +38,7 @@ export function Header() {
             {isMenuOpen ? <X size={32} /> : <Menu size={32} />}
           </button>
 
-          <Link href="/" className="relative h-14 w-40">
+          <Link href="/" className="relative h-14 w-40 -translate-y-[8px]">
             <Image
               src="/logo.png"
               alt="Maria in Neighborhood"

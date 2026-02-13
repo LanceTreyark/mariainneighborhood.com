@@ -54,8 +54,8 @@ export function ContactForm() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="rounded-2xl bg-white p-8 shadow-sm">
-              <h2 className="mb-6 text-3xl font-bold text-gray-900">
+            <div className="rounded-2xl bg-white p-5 sm:p-8 shadow-sm">
+              <h2 className="mb-6 text-2xl sm:text-3xl font-bold text-gray-900">
                 Send a Message
               </h2>
 
@@ -168,8 +168,8 @@ export function ContactForm() {
             className="space-y-8"
           >
             {/* Contact Information */}
-            <div className="rounded-2xl bg-white p-8 shadow-sm">
-              <h2 className="mb-6 text-3xl font-bold text-gray-900">
+            <div className="rounded-2xl bg-white p-5 sm:p-8 shadow-sm">
+              <h2 className="mb-6 text-2xl sm:text-3xl font-bold text-gray-900">
                 Contact Information
               </h2>
 
@@ -219,8 +219,8 @@ export function ContactForm() {
             </div>
 
             {/* Social Media */}
-            <div className="rounded-2xl bg-white p-8 shadow-sm">
-              <h2 className="mb-6 text-3xl font-bold text-gray-900">
+            <div className="rounded-2xl bg-white p-5 sm:p-8 shadow-sm">
+              <h2 className="mb-6 text-2xl sm:text-3xl font-bold text-gray-900">
                 Follow Along
               </h2>
 
