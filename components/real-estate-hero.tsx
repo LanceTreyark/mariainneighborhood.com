@@ -96,12 +96,21 @@ export default function RealEstateHero() {
               />
             </div>
           </motion.div>
-          {/* CTA Button */}
+          {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.8 }}
+            className="flex flex-col items-center gap-3"
           >
+            <a
+              href="https://www.sothebysrealty.com/pacificsir/eng/associate/763-a-df180319044010823351?utm_source=google&utm_medium=organic"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-md bg-black px-8 py-4 text-lg font-medium text-white transition-colors hover:bg-gray-800"
+            >
+              Connect with Maria on Sotheby&#39;s
+            </a>
             <button
               onClick={handleZillowClick}
               className="rounded-md bg-black px-8 py-4 text-lg font-medium text-white transition-colors hover:bg-gray-800"
