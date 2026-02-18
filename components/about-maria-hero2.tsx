@@ -12,9 +12,9 @@ export function AboutMariaHero2() {
                     src="/aboutXv4.jpeg"
                     alt="About Maria"
                     fill
-                    className="object-cover object-left-top"
+                    className="object-cover object-right-top"
                     priority
-                    style={{ objectPosition: 'left top' }}
+                    style={{ objectPosition: 'right top' }}
                 />
                 {/* Pink gradient overlay from left */}
                 {/*<div className="absolute inset-0 bg-gradient-to-l from-[#f5e6e3]/80 via-[#f5e6e3]/80 via-10% to-transparent" />*/}
