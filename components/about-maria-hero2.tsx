@@ -9,7 +9,7 @@ export function AboutMariaHero2() {
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="/newAbout.jpeg"
+                    src="/aboutXv4.jpeg"
                     alt="About Maria"
                     fill
                     className="object-cover object-left-top"
@@ -25,9 +25,6 @@ export function AboutMariaHero2() {
             <div className="relative z-10 mx-auto flex w-full max-w-6xl items-center px-6 py-12">
                 <div className="grid w-full items-center gap-12 lg:grid-cols-2">
                     {/* Left Side: empty spacer */}
-                    <div className="space-y-8"></div>
-
-                    {/* Right Side: Empty Spacer */}
                     <div className="space-y-8">
 
                         {/* Title with Icon */}
@@ -65,6 +62,11 @@ export function AboutMariaHero2() {
                                 and a knack for discovering people's stories.
                             </p>
                         </motion.div>
+
+                    </div>
+
+                    {/* Right Side: Empty Spacer */}
+                    <div className="space-y-8">
 
                     </div>
 
