@@ -23,6 +23,69 @@ export const videos: Video[] = [
     "category": "Events"
   },
   {
+    "id": "VRSk6VVchHU",
+    "title": "SHORTS- Christmas Dance at the Fountain",
+    "description": "",
+    "url": "https://www.youtube.com/watch?v=VRSk6VVchHU",
+    "category": "Community"
+  },
+  {
+    "id": "sQTL2hsqfco",
+    "title": "Torrey Pines Hike",
+    "description": "",
+    "url": "https://www.youtube.com/watch?v=sQTL2hsqfco",
+    "category": "Community"
+  },
+  {
+    "id": "Ob9UM8Uxluw",
+    "title": "SHORTS- Thanksgiving",
+    "description": "",
+    "url": "https://www.youtube.com/watch?v=Ob9UM8Uxluw",
+    "category": "Community"
+  },
+  {
+    "id": "jaduYA5mePE",
+    "title": "Swimming With Seals",
+    "description": "",
+    "url": "https://www.youtube.com/watch?v=jaduYA5mePE",
+    "category": "Community"
+  },
+  {
+    "id": "YfzLTT5F1mk",
+    "title": "SHORTS- Stinky Seals",
+    "description": "",
+    "url": "https://www.youtube.com/watch?v=YfzLTT5F1mk",
+    "category": "Community"
+  },
+  {
+    "id": "8VgB-jsNCGE",
+    "title": "SHORTS- Rain Drops Falling on My Head",
+    "description": "",
+    "url": "https://www.youtube.com/watch?v=8VgB-jsNCGE",
+    "category": "Community"
+  },
+  {
+    "id": "qNGxr53coB0",
+    "title": "SHORTS- Pre Christmas",
+    "description": "",
+    "url": "https://www.youtube.com/watch?v=qNGxr53coB0",
+    "category": "Community"
+  },
+  {
+    "id": "GG6ElzlZXyI",
+    "title": "SHORTS- I hate Sundays",
+    "description": "",
+    "url": "https://www.youtube.com/watch?v=GG6ElzlZXyI",
+    "category": "Community"
+  },
+  {
+    "id": "I1zYZ_HdvzA",
+    "title": "SHORTS- Eads Ave Tiles",
+    "description": "",
+    "url": "https://www.youtube.com/watch?v=I1zYZ_HdvzA",
+    "category": "Community"
+  },
+  {
     "id": "Ht-BRe3x-Fs",
     "title": "Maria in La Jolla ❤️",
     "description": "",
