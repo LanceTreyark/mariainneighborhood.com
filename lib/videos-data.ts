@@ -31,7 +31,7 @@ export const videos: Video[] = [
   },
   {
     "id": "sQTL2hsqfco",
-    "title": "Torrey Pines Hike",
+    "title": "SHORTS- Torrey Pines Hike",
     "description": "",
     "url": "https://www.youtube.com/watch?v=sQTL2hsqfco",
     "category": "Community"
@@ -45,7 +45,7 @@ export const videos: Video[] = [
   },
   {
     "id": "jaduYA5mePE",
-    "title": "Swimming With Seals",
+    "title": "SHORTS- Swimming With Seals",
     "description": "",
     "url": "https://www.youtube.com/watch?v=jaduYA5mePE",
     "category": "Community"
