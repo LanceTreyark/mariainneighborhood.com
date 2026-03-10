@@ -23,6 +23,7 @@ export const videos: Video[] = [
     "category": "Community"
   },
   {
+
     "id": "i5hr9bin4ZQ",
     "title": "Green Light on the Horizon",
     "description": "Maria neighborhood here in San Diego I witnessed something magical — the green light in the horizon . It felt surreal, like ...",
@@ -168,13 +169,6 @@ export const videos: Video[] = [
     "description": "It was so much fun learning more about the sport and the incredible energy at their gym 5755 La Jolla Blvd, La Jolla, CA ...",
     "url": "https://www.youtube.com/watch?v=6hH2ERLsXio",
     "category": "People"
-  },
-  {
-    "id": "d6QbGWAEGGE",
-    "title": "🎬 Maria in the Neighborhood – La Jolla Cove Edition 🏖️🦭",
-    "description": "From breathtaking ocean views to playful sea lions and dreamy coastal homes — come along for the tour!",
-    "url": "https://www.youtube.com/watch?v=d6QbGWAEGGE",
-    "category": "Community"
   },
   {
     "id": "GbUtV3FaFoo",
