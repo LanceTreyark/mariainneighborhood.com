@@ -15,6 +15,14 @@ function getYouTubeId(url: string): string {
 
 // Main videos list - automatically updated from YouTube
 export const videos: Video[] = [
+  
+    {
+    "id": "YB-NH2OYcpw",
+    "title": "...",
+    "description": "...",
+    "url": "https://www.youtube.com/watch?v=YB-NH2OYcpw",
+    "category": "Community"
+  },
   {
     "id": "7u62XvWMkEw",
     "title": "🌟 Maria interviewed Bret Webster at Bret Webster Gallery, La Jolla! 🎨",
