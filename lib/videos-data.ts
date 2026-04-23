@@ -16,6 +16,13 @@ function getYouTubeId(url: string): string {
 // Main videos list - automatically updated from YouTube
 export const videos: Video[] = [
   
+    {
+    "id": "P9dGUdJ1L68",
+    "title": "",
+    "description": "",
+    "url": "https://www.youtube.com/watch?v=P9dGUdJ1L68",
+    "category": "Community"
+  },
   {
     "id": "7u62XvWMkEw",
     "title": "🌟 Maria interviewed Bret Webster at Bret Webster Gallery, La Jolla! 🎨",
@@ -24,7 +31,6 @@ export const videos: Video[] = [
     "category": "Community"
   },
   {
-
     "id": "i5hr9bin4ZQ",
     "title": "Green Light on the Horizon",
     "description": "Maria neighborhood here in San Diego I witnessed something magical — the green light in the horizon . It felt surreal, like ...",
