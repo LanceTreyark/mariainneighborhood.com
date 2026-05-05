@@ -317,9 +317,9 @@ export function WeatherWidget() {
                 </p>
               </div>
               <div className="space-y-2 text-sm text-gray-600">
-                <a href="https://lajollabythesea.com/event-details/?id=art-exhibit-all-shall-be-well" target="_blank" rel="noopener noreferrer"><p>Art Exhibit - All Shall Be Well -Jan 14th-Mar 7th</p></a>
-                <a href="https://lajollabythesea.com/event-details/?id=la-jolla-open-aire-market-httpslocalaarporgeventla-jolla-open-aire-market-2025-12-07-la-jolla-cahtml&date=2026-01-18-09-00" target="_blank" rel="noopener noreferrer"><p>La Jolla Open Aire Market - Sun Jan 18th</p></a>
-                <a href="https://lajollabythesea.com/event-details/?id=tuesday-night-potluck-2&date=2026-01-20-19-00" target="_blank" rel="noopener noreferrer"><p>Tuesday Night Potluck - Open Mic Comedy - Tue Jan 20th</p></a>
+                <a href="https://lajollabythesea.com/event/duncan-trussell_2026-05-15-19-00/" target="_blank" rel="noopener noreferrer"><p>The Comedy Store - Duncan Trussell - May 15th 7pm</p></a>
+                <a href="https://lajollabythesea.com/event/mothers-day-mahjong-mimosas/" target="_blank" rel="noopener noreferrer"><p>Mother’s Day Mahjong + Mimosas! - May 10th 12pm</p></a>
+                <a href="https://lajollabythesea.com/event/pauly-shore-2_2026-06-05-19-00/" target="_blank" rel="noopener noreferrer"><p>The Comedy Store - Pauly Shore - June 5th 7 & 10pm</p></a>
               </div>
             </div>
 

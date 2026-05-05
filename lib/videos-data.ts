@@ -136,10 +136,10 @@ export const videos: Video[] = [
     "category": "Community"
   },
   {
-    "id": "gpQnK3KwsaI",
-    "title": "Inside Bessell Design: Tim Bessell’s Art, Surfing &amp; Warhol Story 🎨🌊",
+    "id": "b4cQ0-6OGxw",
+    "title": "Inside Bessell Design: Tim Bessell’s Art, Surfing & Warhol Story 🎨🌊",
     "description": "I had the absolute pleasure of interviewing the legend Tim Bessel: a master surfboard shaper, successful business owner, ...",
-    "url": "https://www.youtube.com/watch?v=gpQnK3KwsaI",
+    "url": "https://www.youtube.com/watch?v=b4cQ0-6OGxw",
     "category": "Community"
   },
   {
@@ -179,7 +179,7 @@ export const videos: Video[] = [
   },
   {
     "id": "GbUtV3FaFoo",
-    "title": "🎥  Ali from Iran 🇮🇷 Shares Life Tips from La Jolla 🌴 | Motivation &amp; Culture Blend 💬",
+    "title": "🎥  Ali from Iran 🇮🇷 Shares Life Tips from La Jolla 🌴 | Motivation & Culture Blend 💬",
     "description": "Hey everyone! Meet Ali from Iran, now exploring the beauty and inspiration of La Jolla, California! In this video, Ali shares ...",
     "url": "https://www.youtube.com/watch?v=GbUtV3FaFoo",
     "category": "Community"
@@ -193,7 +193,7 @@ export const videos: Video[] = [
   },
   {
     "id": "Uy5UNLWVaGk",
-    "title": "Hidden Gem in La Jolla! 💇‍♀️ Salon Secrets &amp; Local Tips 🌴",
+    "title": "Hidden Gem in La Jolla! 💇‍♀️ Salon Secrets & Local Tips 🌴",
     "description": "Maria had a great conversation with Meghan from Massachusetts, where she shared some amazing La Jolla tips! She also ...",
     "url": "https://www.youtube.com/watch?v=Uy5UNLWVaGk",
     "category": "People"
