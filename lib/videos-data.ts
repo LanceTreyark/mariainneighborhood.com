@@ -15,14 +15,14 @@ function getYouTubeId(url: string): string {
 
 // Main videos list - automatically updated from YouTube
 export const videos: Video[] = [
-     {
-    "id": "w8U39bIvnE7HHL0I",
+  {
+    "id": "mYRJnv1L_gY",
     "title": "🎙️ Exclusive Interview with Restaurateur Sami Ladeki 🍕✨",
     "description": "An interview with Sami Ladeki, the visionary entrepreneur behind the famous Sammy’s Woodfired Pizza 🍕 and Roppongi Restaurant & Sushi Bar in La Jolla...",
-    "url": "https://youtu.be/mYRJnv1L_gY?si=w8U39bIvnE7HHL0I",
+    "url": "https://www.youtube.com/watch?v=mYRJnv1L_gY",
     "category": "Community"
-    },  
-    {
+  },  
+  {
     "id": "P9dGUdJ1L68",
     "title": "",
     "description": "",
