@@ -18,7 +18,7 @@ export const videos: Video[] = [
   {
     "id": "mYRJnv1L_gY",
     "title": "🎙️ Exclusive Interview with Restaurateur Sami Ladeki 🍕✨",
-    "description": "An interview with Sami Ladeki, the visionary entrepreneur behind the famous Sammy’s Woodfired Pizza 🍕 and Roppongi Restaurant & Sushi Bar in La Jolla...",
+    "description": "An interview with Sami Ladeki, the visionary entrepreneur behind the famous Sammy\’s Woodfired Pizza 🍕 and Roppongi Restaurant & Sushi Bar in La Jolla...",
     "url": "https://www.youtube.com/watch?v=mYRJnv1L_gY",
     "category": "Community"
   },  
