@@ -15,6 +15,13 @@ function getYouTubeId(url: string): string {
 
 // Main videos list - automatically updated from YouTube
 export const videos: Video[] = [
+    {
+    "id": "Gf0Zxkb7zr8",
+    "title": "A wonderful interview with Bella Bailey - ISME Bikinis in La Jolla 🌊✨",
+    "description": "An interview with Bella Bailey, the beautiful young Brazilian entrepreneur behind ISME Bikinis in La Jolla...",
+    "url": "https://www.youtube.com/watch?v=Gf0Zxkb7zr8",
+    "category": "Community"
+  },  
   {
     "id": "mYRJnv1L_gY",
     "title": "🎙️ Exclusive Interview with Restaurateur Sami Ladeki 🍕✨",
