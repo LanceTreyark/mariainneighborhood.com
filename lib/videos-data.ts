@@ -15,20 +15,27 @@ function getYouTubeId(url: string): string {
 
 // Main videos list - automatically updated from YouTube
 export const videos: Video[] = [
-    {
+  {
+    "id": "fxMSeGrBei4",
+    "title": "La Jolla's Most Iconic Building! 🏛️✨ Geisel Library",
+    "description": "the Geisel Library — one of the most architecturally stunning and instantly recognizable buildings in all of San Diego! ...",
+    "url": "https://www.youtube.com/watch?v=fxMSeGrBei4",
+    "category": "Community"
+  },
+  {
     "id": "Gf0Zxkb7zr8",
     "title": "A wonderful interview with Bella Bailey - ISME Bikinis in La Jolla 🌊✨",
     "description": "An interview with Bella Bailey, the beautiful young Brazilian entrepreneur behind ISME Bikinis in La Jolla...",
     "url": "https://www.youtube.com/watch?v=Gf0Zxkb7zr8",
     "category": "Community"
-  },  
+  },
   {
     "id": "mYRJnv1L_gY",
     "title": "🎙️ Exclusive Interview with Restaurateur Sami Ladeki 🍕✨",
     "description": "An interview with Sami Ladeki, the visionary entrepreneur behind the famous Sammy's Woodfired Pizza 🍕 and Roppongi Restaurant & Sushi Bar in La Jolla...",
     "url": "https://www.youtube.com/watch?v=mYRJnv1L_gY",
     "category": "Community"
-  },  
+  },
   {
     "id": "P9dGUdJ1L68",
     "title": "",
