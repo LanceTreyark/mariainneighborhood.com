@@ -16,6 +16,13 @@ function getYouTubeId(url: string): string {
 // Main videos list - automatically updated from YouTube
 export const videos: Video[] = [
   {
+    "id": "9QOV4zIp7dI",
+    "title": "The seawall La Jolla Children's Beach 🌊✨",
+    "description": "A Sunday stroll along the seawall at Children's Beach, offering spectacular ocean views, refreshing sea breezes...",
+    "url": "https://www.youtube.com/watch?v=9QOV4zIp7dI",
+    "category": "Community"
+  },  
+  {
     "id": "fxMSeGrBei4",
     "title": "La Jolla's Most Iconic Building! 🏛️✨ Geisel Library",
     "description": "the Geisel Library — one of the most architecturally stunning and instantly recognizable buildings in all of San Diego! ...",
