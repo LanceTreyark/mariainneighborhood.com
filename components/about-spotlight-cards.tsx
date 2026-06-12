@@ -8,9 +8,9 @@ export function AboutSpotlightCards() {
   const spotlights = [
     {
       title: "Event Spotlight",
-      description: "Art Exhibit - All Shall Be Well -Jan 14th-Mar 7th",
-      image: "/art.webp",
-      href: "https://lajollabythesea.com/event-details/?id=art-exhibit-all-shall-be-well",
+      description: "UX Speakeasy Cafe – Coworking Fridays -July 3rd, 2026",
+      image: "/cafe.jpg",
+      href: "https://lajollabythesea.com/event/ux-speakeasy-cafe-coworking-fridays_2026-07-03-10-00/",
       target: "_blank",
     },
     {

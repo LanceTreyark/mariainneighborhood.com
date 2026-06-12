@@ -317,9 +317,9 @@ export function WeatherWidget() {
                 </p>
               </div>
               <div className="space-y-2 text-sm text-gray-600">
-                <a href="https://lajollabythesea.com/event/duncan-trussell_2026-05-15-19-00/" target="_blank" rel="noopener noreferrer"><p>The Comedy Store - Duncan Trussell - May 15th 7pm</p></a>
-                <a href="https://lajollabythesea.com/event/mothers-day-mahjong-mimosas/" target="_blank" rel="noopener noreferrer"><p>Mother’s Day Mahjong + Mimosas! - May 10th 12pm</p></a>
-                <a href="https://lajollabythesea.com/event/pauly-shore-2_2026-06-05-19-00/" target="_blank" rel="noopener noreferrer"><p>The Comedy Store - Pauly Shore - June 5th 7 & 10pm</p></a>
+                <a href="https://lajollabythesea.com/event/ux-speakeasy-cafe-coworking-fridays_2026-07-03-10-00/" target="_blank" rel="noopener noreferrer"><p>UX Speakeasy Cafe – Coworking Fridays - July 3rd</p></a>
+                <a href="https://lajollabythesea.com/event/fathers-day-live-music-with-bill-hartwell/" target="_blank" rel="noopener noreferrer"><p>Father’s Day Live Music with Bill Hartwell! - June 21st, 5pm</p></a>
+                <a href="https://lajollabythesea.com/event/mix-and-mingle-business-happy-hour/" target="_blank" rel="noopener noreferrer"><p>Mix and Mingle Business Happy Hour- June 23rd, 4-6pm</p></a>
               </div>
             </div>
 
