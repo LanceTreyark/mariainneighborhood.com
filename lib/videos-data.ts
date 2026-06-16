@@ -16,6 +16,13 @@ function getYouTubeId(url: string): string {
 // Main videos list - automatically updated from YouTube
 export const videos: Video[] = [
   {
+    "id": "ryYpMPBuGe0",
+    "title": "Football Artist - Patrick Hamilton - La Jolla, CA 🏈🎨",
+    "description": "Patrick Hamilton is a La Jolla, California-based artist whose original oil paintings capture the beauty of Southern California's coastline...",
+    "url": "https://www.youtube.com/watch?v=ryYpMPBuGe0",
+    "category": "Community"
+  },
+  {
     "id": "9QOV4zIp7dI",
     "title": "The seawall La Jolla Children's Beach 🌊✨",
     "description": "A Sunday stroll along the seawall at Children's Beach, offering spectacular ocean views, refreshing sea breezes...",
